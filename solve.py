@@ -43,7 +43,7 @@ def get_equipmentlist_of_muscle(muscle):
     # 返回肌肉相关器械
     return MuscleGroup(muscle).find_related_equipments()
 
-def find_action_of_euqipments(equipment):
+def get_action_of_euqipments(equipment):
     res = Mongo.action.find()
     action_list = []
     for i in res:
