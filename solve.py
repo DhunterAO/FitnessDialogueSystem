@@ -51,6 +51,38 @@ def get_action_of_euqipments(equipment):
             if i['name'] not in action_list:
                 action_list.append(i['name'])
     return action_list
+
+def get_muscle_of_equipments(equipment):
+    res = Mongo.action.find()
+    muscle_list = []
+    for i in res:
+        if i['equipment'] == equipment:
+            if i['mainMuscle'] not in muscle_list:
+                muscle_list.append(i['equipment'])
+    return muscle_list
+
+def print_welcoming():
+    print('您好，欢迎使用THU健身问答任务系统！\n这里有人体肌肉示意图供您参考，请问您对健身哪方面感兴趣呢。\n')
+
+def print_goodbye():
+    print('非常感谢您使用THU健身回答任务系统，希望系统对您的健身需求有所帮助！\n')
+
+def water_replenishing():
+    print('剧烈健身后饮用8-14℃的温水为佳，补水应遵循先少后多的原则，逐步补充水分：可以先用水漱漱口，滋润口腔，喝少量的水，然后在健身后的20-30分钟内，补充150-200mL含糖10%左右的糖盐水最为适宜。\n')
+
+def energy_replenishing():
+    print('选择低淀粉蔬菜作为每餐摄入，每餐吃两个拳头大小的蔬菜量，尽量每天吃到7~10种蔬菜，并且新鲜的调味类蔬菜也是非常好的食物补充。\n')
+    print('蔬菜选择：橄榄、甘蓝、黄瓜、胡萝卜、洋葱、西兰花、芹菜、芦笋、番茄、辣椒、菠菜、葫芦等 \n')
+    print('香料选择：八角、桂皮、葱姜蒜、罗勒、百里香、薄荷、洋葱、胡椒等\n')
+    print('水果的选择：水果的问题在于有些水果果糖很高，如一些浆果类：葡萄等，还有一些瓜类如甜瓜\n')
+    print('有些水果是很好的运动补充，因为富含钾，如香蕉\n有些水果是低卡路里，可以每天吃50~75克，如草莓\n饮料：首选是水，优质的水每天要补充2000毫升以上，水可以帮助加快代谢，更有助身体塑形\n无糖咖啡、茶也是很好的饮料\n也可以选择无糖的运动机能饮料，帮助提升运动效果。\n')
+
+def fitness_protection():
+    print('1.每次锻炼前要做好充分的准备活动，使肌肉发热有弹性，做好高度紧张的准备。\n2.完成每个动作都要高度集中注意力。\n3.认真学习正确的锻炼动作，逐渐提高负荷量。\n4.学会正确的呼吸方法，避免过分憋气。\n5.初学者宜慎重加量，以便使身体各部位适应不断改变的负荷。尤其要加强对抗肌，小肌群的补偿锻炼。\n6.当肌肉出现疼痛，变硬时，应注意调整负荷。\n7.注意个人卫生。\n8.锻炼后要采用各种各样快速恢复的重建措施。')
+
+def lose_weight():
+    print('腹部：西西里卷腹、仰卧抬腿、卷腹、反向卷腹、仰卧风车。（进阶加哑铃）\n腿部：深蹲、单腿硬拉、保加利亚式深蹲。（进阶加哑铃）\n臀部：跪姿后踢腿、俯卧后踢腿、保加利亚式深蹲、各种臀桥。\n背部：俯卧Y字伸展、俯卧TW伸展、俯卧挺身转体。（进阶加哑铃）\n手臂：哑铃俯身臂屈伸、天鹅臂肩膀：哑铃侧平举、天鹅臂。\n胸部：各种俯卧撑、哑铃臀桥飞鸟。')
+
 if __name__ == '__main__':
     # print(get_muscle_of_action('平板支撑'))
     # print(get_muscleGroup_action('肱二头肌'))
