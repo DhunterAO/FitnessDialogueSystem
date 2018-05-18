@@ -21,13 +21,13 @@ patternList = [
     ['machine', '动作'],  # 哑铃主要可以做哪些动作
     ['machine', 'action', 'muscle'],  # 哑铃卧推怎样锻炼到胸中束  #14
 
+    ['服饰'],  # 去健身房穿什么运动服饰比较好
 
     # ['action','防具'],# 深蹲防具该准备哪些
     # ['muscle','热身'],# 背阔肌怎样热身
     # ['练','水'],# 锻炼怎样补充水
     # ['练','能量'],# 锻炼能量怎样补充
     # ['极限','action','保护'],# 极限重量深蹲怎样保护避免受伤
-    # ['服饰'],# 去健身房穿什么运动服饰比较好
     # ['machine', 'action', 'special'],  # 哑铃卧推比杠铃卧推效果好吗
     # ['machine', 'action', '重量'],  # 杠铃卧推重量该怎么选择
 ]
@@ -93,6 +93,9 @@ def pattern(sentence):
                 return ###need to be solve
             if index == 14:
                 return get_muscleGroup_action(sentence[1][1])
+            if index == 15:
+                return clothes_advice()
+
     return 'unknown'
 
 
