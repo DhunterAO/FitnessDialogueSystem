@@ -28,32 +28,33 @@ patternList = [
     ['炼', '补水'],  # 锻炼怎样补充水
     ['炼', '补充能量'],  # 锻炼能量怎样补充
 
-    ['action', '保护'],  # 深蹲怎样保护自己
+    ['action', '保护'],  # 深蹲怎样保护自己   #20
     ['action', '避免'],   #深度怎么避免受伤
     ['健身', '保护'],   #健身中怎么保护自己
     ['健身', '避免'],   #健身中怎么避免受伤
-    ['健身','服饰'],  # 去健身房穿什么运动服饰比较好
-    ['增肌', '动作'],  # 增肌该做些什么动作
+
+    ['增肌', '动作'],  # 增肌该做些什么动作  # 24
+    ['增肌'],     #增肌该怎么做     #25
     ['减脂'],  # 减脂该怎么做
     ['减肥'],  # 减肥该怎么做
-    ['健身','礼仪'],  # 健身礼仪是什么
-    ['健身','休息'],  # 健身后如何合理休息
+    ['增重'],  #增重该怎么做
+    ['减重'],  #减重该怎么做
+
+    ['健身','休息'],  # 健身后如何合理休息  #30
     ['健身','注意','饮食'],  # 健身期间如何注意饮食搭配
     ['健身','饮食'], #健身中的饮食搭配 健身后的饮食搭配 健身如何进行饮食搭配
-    ['练', '规划'],  # 能给我提点简单的训练时间规划吗（主要是不同训练阶段的频次安排，每周几练，时间间隔等）
-    ['健身房', 'special'],  # 去健身房有效果嘛
-    # ['户外', '健身房', 'special'],  # 户外健身和健身房相比效果好吗
-    ['不', '健身房', 'muscle'],  # 不去健身房怎样锻炼胸肌
-    ['避免', '代偿'],  # 锻炼时怎样避免次肌肉群代偿
-    # ['有氧训练'],  # 有氧训练怎样进行
+    ['规划'],  # 能给我提点简单的训练时间规划吗（主要是不同训练阶段的频次安排，每周几练，时间间隔等）
 
-    ['machine', '动作'],  # 哑铃主要可以做哪些动作
-    ['machine', 'action', '重量'],  # 杠铃卧推重量该怎么选择
-    ['machine', 'action', 'special'],  # 哑铃卧推比杠铃卧推效果好吗
-    ['machine', 'action', 'muscle'],  # 哑铃卧推怎样锻炼到胸中束
-    ['machine', 'muscle', 'special'],  # 杠铃怎样练二头有效果
-    ['machine', 'action', 'muscle', 'special'],  # 哑铃卧推对二头效果好吗
-    # ['action','防具'],# 深蹲防具该准备哪些
+    
+    
+    # ['machine', 'action', 'muscle'],  # 哑铃卧推怎样锻炼到胸中束
+    # ['machine', 'muscle', 'special'],  # 杠铃怎样练二头有效果
+    # ['machine', 'action', 'muscle', 'special'],  # 哑铃卧推对二头效果好吗
+    # ['健身','服饰'],  # 去健身房穿什么运动服饰比较好
+    # ['健身','礼仪'],  # 健身礼仪是什么
+    # ['户外', '健身房', 'special'],  # 户外健身和健身房相比效果好吗
+    #  ['action','防具'],# 深蹲防具该准备哪些
+    # ['有氧训练'],  # 有氧训练怎样进行
     # ['muscle','热身'],# 背阔肌怎样热身
     # ['练','水'],# 锻炼怎样补充水
     # ['练','能量'],# 锻炼能量怎样补充
@@ -61,6 +62,8 @@ patternList = [
     # ['服饰'],# 去健身房穿什么运动服饰比较好
     # ['machine', 'action', 'special'],  # 哑铃卧推比杠铃卧推效果好吗
     # ['machine', 'action', '重量'],  # 杠铃卧推重量该怎么选择
+    # ['machine', 'action', '重量'],  # 杠铃卧推重量该怎么选择
+    # ['machine', 'action', 'special'],  # 哑铃卧推比杠铃卧推效果好吗
 ]
 
 
@@ -132,14 +135,20 @@ def pattern(sentence):
                 water_replenishing()
             if index == 19:
                 energy_replenishing()
-            if index == 20 or index ==21:
+            if index == 20 or index == 21 or index == 22 or index == 23:
                 fitness_protection()
-            if index == 22:
-                #wait for answer
-            if index == 23:
+            if index == 24 or index == 25:
+                musculus_muscle()
+            if index == 26 or index == 27 or index == 29:
                 lose_weight()
-
-
+            if index == 28:
+                increase_weight()
+            if index == 30:
+                relax()
+            if index == 31 or index == 32:
+                energy_replenishing()
+            if index == 33:
+                fitness_planing()
 
     return 'unknown'
 
