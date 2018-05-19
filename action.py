@@ -5,17 +5,17 @@ class Action:
     def __init__(self, name):
         self.name = name
         res = Mongo.action.find_one({'name': name})
-        self.level = res['level']
-        self.type = res['type']
+        print(res)
+        # self.level = res['level']
+        # self.type = res['type']
         self.mainMuscle = res['mainMuscle']
         self.assistantMuscle = res['assistantMuscle']
         self.equipment = res['equipment']
         self.details = res['details']
         self.describe = res['describe']
 
-
     def find_muscle_action(self, muscle):
-        return  Mongo.action.find({'mianMuscle': muscle})
+        return Mongo.action.find({'mianMuscle': muscle})
 
     def match(self, require):
         require_type = require.get('type', None)
@@ -46,5 +46,4 @@ class Action:
 
     def get_describe(self):
         return self.describe
-
 

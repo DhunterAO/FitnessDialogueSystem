@@ -26,4 +26,11 @@ class Question:
 
 
 if __name__ == '__main__':
-    Question.questionCut("举哑铃除了锻炼肱三头肌还有什么作用?")
+    # Question.questionCut("举哑铃除了锻炼肱三头肌还有什么作用?")
+    a = {
+        '1': 3,
+        '2': 4
+    }
+    for i in a:
+        print(i)
+        print(a[i])

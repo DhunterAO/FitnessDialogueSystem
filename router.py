@@ -6,12 +6,14 @@ app = Flask('__name__')
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return send_file('index.html')
+    return send_file('test.html')
 
 
 @app.route('/input', methods=['POST'])
 def answer_question():
-    return answer('da')
+    question = request.form.get('question')
+    print(question)
+    return answer(question)
 
 
 @app.route('/<static_file>', methods=['GET'])
