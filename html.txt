@@ -1,0 +1,665 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+    <meta name="applicable-device" content="pc">  <meta name="mobile-agent" content="format=html5;url=http://m.hiyd.com/dongzuo/1602/"/> <link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.hiyd.com/dongzuo/1602/" >    <title>弹力带直腿硬拉正确动作要领_弹力带直腿硬拉视频GIF图解_Hi运动健身网</title>
+    <meta name="keywords" content="弹力带直腿硬拉，锻炼腘绳肌，中级难度动作，弹力带直腿硬拉动作图解，弹力带直腿硬拉动作视频，弹力带直腿硬拉动作详解">
+    <meta name="description" content="弹力带直腿硬拉：类型：下肢，级别：中级，主要肌肉群：腘绳肌，其他肌肉：无，器械要求：弹力带">
+    <link href="/static/css/global.css?a28cacf8a7cada62" rel="stylesheet">
+</head>
+<body>
+	<div class="o-hiyd">
+		<script>
+SITE_URL = "/";
+</script>
+<script src="/static/js/libs/seajs.utils.js?7c9ae9ca1b254cde"></script>
+<div class="o-header2">
+    <div class="o-header2_inner">
+    	<a href="https://www.hiyd.com/" class="o-header_logo">
+            <img src="/static/img/logo3.png?218f9b39b0457ae3" />
+        </a>
+        <div class="o-header2-nav">
+                                <div data-hicms-tmpl="hiyd-nav">
+                        
+<div>
+  <a href="//www.hiyd.com/dongzuo/" target='_self' class="item">健身动作库</a>
+  <a href="//www.hiyd.com/bb/" target='_self' class="item">训练计划</a>
+  <a href="//www.hiyd.com/course/index/" target='_self' class="item">特色课程</a>
+  <a href="//food.hiyd.com/" target='_self' class="item">饮食查询</a>
+  <a href="//www.hiyd.com/jianshen/" target='_self' class="item">健身知识</a>
+  <a href="//www.hiyd.com/videos/" target='_self' class="item">健身视频</a>
+  <a href="//www.hiyd.com/tools/index/" target='_self' class="item">健身工具</a>
+  <a href="//www.hiyd.com/dl/" target='_self' class="item item-dl">下载App</a>
+</div>
+                    </div>
+                        <div class="item-group">
+                <span id="btn_ouj_login" >登录</span>|
+                <span id="btn_ouj_register" >注册</span>
+            </div>
+            
+        </div>
+
+        <div class="o-header_ctrl">
+                </div>
+    </div>
+</div>
+<script>
+    seajs.use(['ouj_sdk'], function(sdk) {
+        sdk.init();
+    });
+</script>
+<!-- <div class="o-hiyd-header">
+	hi运动头部
+</div> -->		<div class="o-exercise page aside-fold" id="o-exercise" page-type="video">
+			<div class="o-exercise-aside" id="exercise-aside">
+	<div class="sort-menu">
+		<div class="menu-search">
+			<div class="aside-search">
+				<form method="get" id="asideSearchForm" name="asideSearchForm" action="">
+					<input class="typeahead" data-url="" id="acTrigger3" type="text" value="" autocomplete="off" placeholder="动作名" />
+				</form>
+				<span class="aside-icon-search"></span>
+			</div>
+		</div>
+		<div id="group_course" class="menu-group group-tp1 ">
+			<a href="https://www.hiyd.com/bb/">
+				<div class="group-hd">
+					<i></i><h3>训练课程</h3><em></em>
+				</div>
+			</a>
+		</div>
+		<div id="group_exercise" class="menu-group group-tp2 group-expand">
+			<div class="group-hd">
+				<i></i><h3>训练动作</h3><em></em>
+			</div>
+			<div class="group-bd">
+				<div class="menu-item instrument">
+					<div class="menu-item-hd">
+						<h3 class="menu-label">器械要求</h3>
+					</div>
+
+					<div class="menu-item-bd">
+						<a href="https://www.hiyd.com/dongzuo/" class="sort-item selected">不限器械</a>
+												    																							<a href="https://www.hiyd.com/dongzuo/?equipment=3" class="sort-item" title="徒手训练动作姿势图解">
+									徒手训练								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=57" class="sort-item" title="双人训练动作姿势图解">
+									双人训练								</a>
+																											    																							<a href="https://www.hiyd.com/dongzuo/?equipment=13" class="sort-item" title="其他器械动作姿势图解">
+									其他器械								</a>
+																											    								<div class="group-label menu-label">自由器械</div>
+																														<a href="https://www.hiyd.com/dongzuo/?equipment=8" class="sort-item" title="哑铃动作姿势图解">
+									哑铃								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=10" class="sort-item" title="杠铃动作姿势图解">
+									杠铃								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=11" class="sort-item" title="壶铃动作姿势图解">
+									壶铃								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=20" class="sort-item" title="弹力带动作姿势图解">
+									弹力带								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=23" class="sort-item" title="TRX绳动作姿势图解">
+									TRX绳								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=24" class="sort-item" title="战绳动作姿势图解">
+									战绳								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=15" class="sort-item" title="药球动作姿势图解">
+									药球								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=19" class="sort-item" title="瑞士球动作姿势图解">
+									瑞士球								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=53" class="sort-item" title="波速球动作姿势图解">
+									波速球								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=17" class="sort-item" title="泡沫轴动作姿势图解">
+									泡沫轴								</a>
+																											    								<div class="group-label menu-label">固定器械</div>
+																														<a href="https://www.hiyd.com/dongzuo/?equipment=32" class="sort-item" title="龙门架动作姿势图解">
+									龙门架								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=31" class="sort-item" title="史密斯机动作姿势图解">
+									史密斯机								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=30" class="sort-item" title="推胸机动作姿势图解">
+									推胸机								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=51" class="sort-item" title="悍马机动作姿势图解">
+									悍马机								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=33" class="sort-item" title="夹胸器动作姿势图解">
+									夹胸器								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=34" class="sort-item" title="划船机动作姿势图解">
+									划船机								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=35" class="sort-item" title="下拉机动作姿势图解">
+									下拉机								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=50" class="sort-item" title="地雷架动作姿势图解">
+									地雷架								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=56" class="sort-item" title="推肩器动作姿势图解">
+									推肩器								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=37" class="sort-item" title="倒蹬机动作姿势图解">
+									倒蹬机								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=38" class="sort-item" title="哈克机动作姿势图解">
+									哈克机								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=39" class="sort-item" title="腿弯举机动作姿势图解">
+									腿弯举机								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=40" class="sort-item" title="腿屈伸机动作姿势图解">
+									腿屈伸机								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=43" class="sort-item" title="提踵机动作姿势图解">
+									提踵机								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=28" class="sort-item" title="单杠动作姿势图解">
+									单杠								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=29" class="sort-item" title="双杠动作姿势图解">
+									双杠								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=26" class="sort-item" title="仰卧板动作姿势图解">
+									仰卧板								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=27" class="sort-item" title="罗马椅动作姿势图解">
+									罗马椅								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=52" class="sort-item" title="牧师凳动作姿势图解">
+									牧师凳								</a>
+																															<a href="https://www.hiyd.com/dongzuo/?equipment=55" class="sort-item" title="有氧器械动作姿势图解">
+									有氧器械								</a>
+																										</div>
+
+				</div>
+				<div class="menu-item training-part">
+					<div class="menu-item-hd">
+						<h3 class="menu-label">训练部位</h3>
+						<a href="/exercise/muscleShow/" class="sort-item item-muscle-show">肌肉展示</a>
+					</div>
+					<div class="menu-item-bd">
+						<a href="https://www.hiyd.com/dongzuo/" class="sort-item selected">不限部位</a>
+																					<a href="https://www.hiyd.com/dongzuo/?muscle=8" class="sort-item" title="肱二头肌怎么练/肱二头肌肌肉锻炼方法视频">
+								肱二头肌								</a>
+																												<a href="https://www.hiyd.com/dongzuo/?muscle=9" class="sort-item" title="胸肌怎么练/胸肌肌肉锻炼方法视频">
+								胸肌								</a>
+																												<a href="https://www.hiyd.com/dongzuo/?muscle=10" class="sort-item" title="前臂怎么练/前臂肌肉锻炼方法视频">
+								前臂								</a>
+																												<a href="https://www.hiyd.com/dongzuo/?muscle=11" class="sort-item" title="中背部怎么练/中背部肌肉锻炼方法视频">
+								中背部								</a>
+																												<a href="https://www.hiyd.com/dongzuo/?muscle=12" class="sort-item" title="下背部怎么练/下背部肌肉锻炼方法视频">
+								下背部								</a>
+																												<a href="https://www.hiyd.com/dongzuo/?muscle=13" class="sort-item" title="颈部怎么练/颈部肌肉锻炼方法视频">
+								颈部								</a>
+																												<a href="https://www.hiyd.com/dongzuo/?muscle=14" class="sort-item" title="股四头肌怎么练/股四头肌肌肉锻炼方法视频">
+								股四头肌								</a>
+																												<a href="https://www.hiyd.com/dongzuo/?muscle=15" class="sort-item" title="腘绳肌怎么练/腘绳肌肌肉锻炼方法视频">
+								腘绳肌								</a>
+																												<a href="https://www.hiyd.com/dongzuo/?muscle=16" class="sort-item" title="小腿肌群怎么练/小腿肌群肌肉锻炼方法视频">
+								小腿肌群								</a>
+																												<a href="https://www.hiyd.com/dongzuo/?muscle=17" class="sort-item" title="肱三头肌怎么练/肱三头肌肌肉锻炼方法视频">
+								肱三头肌								</a>
+																												<a href="https://www.hiyd.com/dongzuo/?muscle=18" class="sort-item" title="斜方肌怎么练/斜方肌肌肉锻炼方法视频">
+								斜方肌								</a>
+																												<a href="https://www.hiyd.com/dongzuo/?muscle=19" class="sort-item" title="肩部怎么练/肩部肌肉锻炼方法视频">
+								肩部								</a>
+																												<a href="https://www.hiyd.com/dongzuo/?muscle=20" class="sort-item" title="腹肌怎么练/腹肌肌肉锻炼方法视频">
+								腹肌								</a>
+																												<a href="https://www.hiyd.com/dongzuo/?muscle=21" class="sort-item" title="臀部肌群怎么练/臀部肌群肌肉锻炼方法视频">
+								臀部肌群								</a>
+																												<a href="https://www.hiyd.com/dongzuo/?muscle=23" class="sort-item" title="内收肌群怎么练/内收肌群肌肉锻炼方法视频">
+								内收肌群								</a>
+																												<a href="https://www.hiyd.com/dongzuo/?muscle=24" class="sort-item" title="外展肌群怎么练/外展肌群肌肉锻炼方法视频">
+								外展肌群								</a>
+																												<a href="https://www.hiyd.com/dongzuo/?muscle=26" class="sort-item" title="背阔肌怎么练/背阔肌肌肉锻炼方法视频">
+								背阔肌								</a>
+																												<a href="https://www.hiyd.com/dongzuo/?muscle=33" class="sort-item" title="髂腰肌怎么练/髂腰肌肌肉锻炼方法视频">
+								髂腰肌								</a>
+																		</div>
+				</div>
+				<div class="menu-item training-hard">
+					<div class="menu-item-hd">
+						<h3 class="menu-label">训练难度</h3>
+					</div>
+					<div class="menu-item-bd">
+						<a href="https://www.hiyd.com/dongzuo/" class="sort-item selected">不限难度</a>
+																					<a href="https://www.hiyd.com/dongzuo/?difficulty=6" class="sort-item" title="初级">
+								初级								</a>
+																												<a href="https://www.hiyd.com/dongzuo/?difficulty=9" class="sort-item" title="中级">
+								中级								</a>
+																												<a href="https://www.hiyd.com/dongzuo/?difficulty=11" class="sort-item" title="高级">
+								高级								</a>
+																		</div>
+				</div>
+				
+
+			</div>
+		</div>
+	</div>
+	<a href="javascript:void(0)" class="menu-handler">开关</a>
+</div>
+<script>
+	seajs.use(['js/sidebar.js?cbd66f06e7294cc6'], function(e) {
+		e.init();
+	});
+</script>
+			<div class="o-exercise-main">
+				<div class="o-video">
+					<!-- 面包屑导航{ -->
+					<!-- <div class="mod-crumbs">
+						<span>当前位置：</span><a class="back-to-index" href="/dongzuo/">健身库</a><span class="arrow">»</span><b>弹力带直腿硬拉</b>
+					</div> -->
+					<!-- }面包屑导航 -->
+					<di class="o-video-bd">
+						<div class="o-video-video" data-isjoin="">
+	                        <div class="o-video-player" id="videoPlayer">
+	                            <div class="o-video-player-main2">
+	                                <div class="video-player"></div>
+	                            </div>
+	                        </div>
+	                    </div>
+						<!-- 动作信息{ -->
+						<div class="o-video-info">
+							<div class="info-hd clearfix">
+								<h1 class="video-title">弹力带直腿硬拉</h1>
+								<div class="m-share-list" id="oshop-shareBar">
+                                    <a href="" class="share-handler">我要分享</a>
+                                    <div class="share-menu">
+                                        <ul>
+                                            <li><a data-role="weibo" class="weibo">新浪微博</a></li>
+                                            <li><a data-role="qq-zone" class="qzone">QQ空间</a></li>
+                                            <li><a data-role="wechat" class="wechat">微信</a></li>
+                                            <li><a data-role="qq" class="qq">QQ</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <script>
+                                seajs.use('js/libs/oujShare.js?8b427d7f4df4ee97', function(oujShare) {
+                                    var Share = oujShare({
+                                        selector : "#oshop-shareBar",
+                                        share_url : window.location.href,
+                                        app_id : "",
+                                        share_pic : "https://w2.dwstatic.com/yy/ojiastoreimage/20161028_0c8a547286e5697d4d4fda2c2f49cce6.jpg",
+                                        share_title : "弹力带直腿硬拉",
+                                        share_desc : "弹力带直腿硬拉",
+                                        share_language : "zh_cn"
+                                    });
+                                });
+                                </script>
+								<span class="choose-coach-wrap">
+									<!-- <span class="choose-coach"></span> -->
+	                                                                												<em class="coach-man selected" data-type="1">男教练</em>
+                                			                                	                                                                												<em class="coach-woman " data-type="2">女教练</em>
+                                			                                								</span>
+								<!--<span class="join-num">586523人参与</span>-->
+							</div>
+							<div class="info-main">
+								<div class="info-main-section">
+									<p class="p-mg-bottom">类型&nbsp;:&nbsp;<em>下肢</em></p>
+									<p>级别&nbsp;:&nbsp;<a href="/dongzuo/?difficulty=9"><em>中级</em></a></p>
+								</div>
+								<div class="info-main-section">
+									<p class="p-mg-bottom">主要肌肉群&nbsp;:&nbsp;<a href="/dongzuo/?muscle=15"><em>腘绳肌</em></a></p>
+									<!-- <p>其他肌肉&nbsp;:&nbsp;<em></em></p> -->
+									<p>其他肌肉&nbsp;:&nbsp;<em>
+									无
+																		</em>
+									</p>
+								</div>
+								<div class="info-main-section">
+									<p>器械要求&nbsp;:&nbsp;<em>
+																														<a href="/dongzuo/?equipment=20">弹力带</a>																													</em></p>
+								</div>
+							</div>
+						</div>
+						<!-- }动作信息 -->
+						<!-- 动作要领图{ -->
+						<!-- 						<div class="o-video-guide-pics">
+							<h2 class="guide-pics-title">动作要领图</h2>
+							<div class="guide-pic-wrap">
+								<div class="ui-slide ext-dotted" data-role="slide-demo1">
+									<div class="ui-slide__inner">
+									    <ul class="ui-slide__content" data-switchable-role="content">	
+									    										        <li class="ui-slide__panel">
+												<img src="https://w2.dwstatic.com/yy/ojiastoreimage/1479708689023_am__len80753.jpg" alt="">
+									        </li>
+									    										        <li class="ui-slide__panel">
+												<img src="https://w2.dwstatic.com/yy/ojiastoreimage/1479708712383_am__len74699.jpg" alt="">
+									        </li>
+									    										    </ul>
+									</div>
+								     <ul class="ui-slide__nav" data-switchable-role="nav">
+							     										        <li class="ui-slide__trigger is-active"></li>
+								    									        <li class="ui-slide__trigger "></li>
+								    									    </ul>
+								    <span class="ui-slide__prev" data-switchable-role="prev"><i class="ui-icon"></i></span>
+								    <span class="ui-slide__next" data-switchable-role="next"><i class="ui-icon"></i></span>
+								</div>
+							</div>
+						</div>
+						 -->
+						<!-- }动作要领图 -->
+						<!-- 动作要领图-2{ -->
+												<div class="o-video-guide-pics2">
+							<h2 class="guide-pics-title">动作要领图</h2>
+							<div class="guide-pic-wrap">
+								<ul class="guide-pic-list clearfix">
+                                    																        <li class="expand-img">
+										<img src="https://w2.dwstatic.com/yy/ojiastoreimage/1479708689023_am__len80753.jpg" alt="">
+																				<div class="guide-point-wrap">
+																					<pre>1、两脚分立，俯身，保持肩关节在膝盖的前方，握紧弹力绳，这是你的起始位置。</pre>
+										</div>
+							        </li>
+							        							        <li class="expand-img">
+										<img src="https://w2.dwstatic.com/yy/ojiastoreimage/1479708712383_am__len74699.jpg" alt="">
+																				<div class="guide-point-wrap no-border">
+																					<pre>1、收缩臀部和大腿后侧使身体恢复直立姿态，过程中保持膝关节自然伸直。</pre>
+										</div>
+							        </li>
+							        							    </ul>
+							</div>
+						</div>
+						 
+						<!-- }动作要领图-2 -->
+						<!-- 动作要领{ -->
+						<div class="o-video-guide">
+							<div class="gap"></div>
+							<div class="guide-pic">
+								<h3>主要肌肉示意图</h3>
+																									<img src="https://image.yy.com/ojiastoreimage/1476955150690_am__len53226.png" alt="">
+									<img src="https://w2.dwstatic.com/yy/ojiastoreimage/1479725235571_am_" alt="">
+															</div>
+							<div class="guide-text">
+								<h3>弹力带直腿硬拉的动作要领</h3>
+								<pre class="cont">1、两脚分立，俯身，保持肩关节在膝盖的前方，握紧弹力绳，这是你的起始位置。
+2、收缩臀部和大腿后侧使身体恢复直立姿态，过程中保持膝关节自然伸直。</pre>
+							</div>
+						</div>
+						<!-- }动作要领 -->
+						<!-- 替换动作图{ -->
+												<!-- }替换动作图 -->
+
+						<div class="o-seo-bottom">
+														<div class="o-exercise-relative">	
+								<h2>相关动作</h2>
+								<ul class="list-exercise">
+																		<li>
+										<a href='//www.hiyd.com/dongzuo/59/' target="_blank">俯卧腿弯举</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/61/' target="_blank">单腿硬拉 L</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/216/' target="_blank">硬拉摇摆</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/1539/' target="_blank">哑铃直腿硬拉</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/1540/' target="_blank">哑铃硬拉</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/1541/' target="_blank">哑铃摇摆</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/1601/' target="_blank">弹力带硬拉</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/1602/' target="_blank">弹力带直腿硬拉</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/802/' target="_blank">抬腿腘绳肌拉伸</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/639/' target="_blank">坐姿腘绳肌训练</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/577/' target="_blank">哑铃罗马尼亚硬拉</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/54/' target="_blank">原地臀踢</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/798/' target="_blank">抓举牵引</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/781/' target="_blank">悬杆早安式</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/394/' target="_blank">力量阶梯</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/1216/' target="_blank">力量抓举</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/1128/' target="_blank">跑步者拉伸</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/292/' target="_blank">交替悬垂翻</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/497/' target="_blank">反向弹力带相扑硬拉</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/742/' target="_blank">弓箭步穿插</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/1024/' target="_blank">肌肉抓举</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/388/' target="_blank">前后摆腿</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/999/' target="_blank">线型三步起跑法</a>
+									</li>
+																			<li>
+										<a href='//www.hiyd.com/dongzuo/390/' target="_blank">前箱跳</a>
+									</li>
+																		</ul>
+							</div>
+							
+							<div class="o-exercise-recommend">	
+								<div class="tab">
+									<div class="tab-hd">
+										<ul>
+											<li class="active"><a href="http://www.hiyd.com/jianshen/">健身知识</a></li>
+											<li><a href="http://www.hiyd.com/bb/">健身计划</a></li>
+											<li><a href="http://www.hiyd.com/course/index/">健身课程</a></li>
+										</ul>
+									</div>
+									<div class="tab-bd">
+										<div class="tab-panel active">
+																						<ul>
+																								<li><a href='//www.hiyd.com/zengji/3000.html' target="_blank" title=''>大腿肌肉锻炼计划 4个超实用的腿部训练动作</a></li>
+																								<li><a href='//www.hiyd.com/jianfei/2565.html' target="_blank" title=''>美女模特教你逐个击破脂肪囤积部位</a></li>
+																								<li><a href='//www.hiyd.com/jianfei/2276.html' target="_blank" title=''>【放松训练】泡沫轴腿部放松，跑步爱好者必看！</a></li>
+																								<li><a href='//www.hiyd.com/jianfei/2221.html' target="_blank" title=''>【家庭健身】马甲线女神教你4招甩掉臃肿下半身</a></li>
+																								<li><a href='//www.hiyd.com/guanjunzhixin/1171.html' target="_blank" title=''>【中文字幕】冠军之心7天训练课程 - 第4天 腿部</a></li>
+																								<li><a href='//www.hiyd.com/jeff_seid/1018.html' target="_blank" title=''>【中文字幕】健体明星杰夫·赛德5天训练课程 - 第3天 腿部</a></li>
+																								<li><a href='//www.hiyd.com/p4p/776.html' target="_blank" title=''>8分钟腿部锻炼：高级课程</a></li>
+																								<li><a href='//www.hiyd.com/p4p/775.html' target="_blank" title=''>8分钟腿部锻炼：中级课程</a></li>
+																								<li><a href='//www.hiyd.com/p4p/774.html' target="_blank" title=''>8分钟腿部锻炼：初级课程</a></li>
+																								<li><a href='//www.hiyd.com/jianfei/603.html' target="_blank" title=''>【居家健身】适合所有人的全身超级燃脂训练</a></li>
+																								<li><a href='//www.hiyd.com/jianfei/387.html' target="_blank" title=''>【瑜伽球训练】用瑜伽球训练下半身</a></li>
+																								<li><a href='//www.hiyd.com/jianfei/370.html' target="_blank" title=''>【腿部训练】9分钟高效瘦腿训练</a></li>
+																								<li><a href='//www.hiyd.com/jianfei/278.html' target="_blank" title=''>【腿部训练】大腿内侧减脂练习，告别大象腿</a></li>
+																								<li><a href='//www.hiyd.com/zengji/188.html' target="_blank" title=''>深蹲好处多多 即能壮腿又能提高战斗力</a></li>
+																								<li><a href='//www.hiyd.com/zengji/186.html' target="_blank" title=''>五个动作 教你练出一双健硕双腿</a></li>
+																								<li><a href='//www.hiyd.com/zengji/168.html' target="_blank" title=''>增强腿部肌肉 练习深蹲有什么好处</a></li>
+																							</ul>
+																					</div>
+										<div class="tab-panel">
+																						<ul>
+																								<li><a href='https://www.hiyd.com/bb/574/' target="_blank" title='哑铃腿部肌肉强化训练-新手（2练/周）'>哑铃腿部肌肉强化训练-新手（2练/周）</a></li>
+																								<li><a href='https://www.hiyd.com/bb/575/' target="_blank" title='哑铃腿部肌肉强化训练-新手（3练/周）'>哑铃腿部肌肉强化训练-新手（3练/周）</a></li>
+																								<li><a href='https://www.hiyd.com/bb/576/' target="_blank" title='哑铃腿部肌肉强化训练-新手（4练/周）'>哑铃腿部肌肉强化训练-新手（4练/周）</a></li>
+																								<li><a href='https://www.hiyd.com/bb/577/' target="_blank" title='哑铃腿部肌肉强化训练-新手（5练/周）'>哑铃腿部肌肉强化训练-新手（5练/周）</a></li>
+																								<li><a href='https://www.hiyd.com/bb/606/' target="_blank" title='哑铃腿部肌肉强化训练-初级（2练/周）'>哑铃腿部肌肉强化训练-初级（2练/周）</a></li>
+																								<li><a href='https://www.hiyd.com/bb/607/' target="_blank" title='哑铃腿部肌肉强化训练-初级（3练/周）'>哑铃腿部肌肉强化训练-初级（3练/周）</a></li>
+																								<li><a href='https://www.hiyd.com/bb/608/' target="_blank" title='哑铃腿部肌肉强化训练-初级（4练/周）'>哑铃腿部肌肉强化训练-初级（4练/周）</a></li>
+																								<li><a href='https://www.hiyd.com/bb/609/' target="_blank" title='哑铃腿部肌肉强化训练-初级（5练/周）'>哑铃腿部肌肉强化训练-初级（5练/周）</a></li>
+																								<li><a href='https://www.hiyd.com/bb/638/' target="_blank" title='哑铃腿部肌肉强化训练-中级（2练/周）'>哑铃腿部肌肉强化训练-中级（2练/周）</a></li>
+																								<li><a href='https://www.hiyd.com/bb/639/' target="_blank" title='哑铃腿部肌肉强化训练-中级（3练/周）'>哑铃腿部肌肉强化训练-中级（3练/周）</a></li>
+																								<li><a href='https://www.hiyd.com/bb/640/' target="_blank" title='哑铃腿部肌肉强化训练-中级（4练/周）'>哑铃腿部肌肉强化训练-中级（4练/周）</a></li>
+																								<li><a href='https://www.hiyd.com/bb/641/' target="_blank" title='哑铃腿部肌肉强化训练-中级（5练/周）'>哑铃腿部肌肉强化训练-中级（5练/周）</a></li>
+																								<li><a href='https://www.hiyd.com/bb/527/' target="_blank" title='Power 90大师系列'>Power 90大师系列</a></li>
+																								<li><a href='https://www.hiyd.com/bb/465/' target="_blank" title='把握生活 - 7×24健身计划'>把握生活 - 7×24健身计划</a></li>
+																								<li><a href='https://www.hiyd.com/bb/520/' target="_blank" title='莱美搏击操'>莱美搏击操</a></li>
+																								<li><a href='https://www.hiyd.com/bb/537/' target="_blank" title='TapouT XT'>TapouT XT</a></li>
+																								<li><a href='https://www.hiyd.com/bb/519/' target="_blank" title='冠军之心 7天训练课程'>冠军之心 7天训练课程</a></li>
+																								<li><a href='https://www.hiyd.com/bb/444/' target="_blank" title='12周重返好身材计划'>12周重返好身材计划</a></li>
+																								<li><a href='https://www.hiyd.com/bb/517/' target="_blank" title='巴西翘臀健身-瘦身锻炼'>巴西翘臀健身-瘦身锻炼</a></li>
+																								<li><a href='https://www.hiyd.com/bb/554/' target="_blank" title='Chalean Extreme Lean For Life阶段'>Chalean Extreme Lean For Life阶段</a></li>
+																								<li><a href='https://www.hiyd.com/bb/502/' target="_blank" title='Rev Abs高级版'>Rev Abs高级版</a></li>
+																								<li><a href='https://www.hiyd.com/bb/558/' target="_blank" title='布拉德·皮特 重量训练'>布拉德·皮特 重量训练</a></li>
+																								<li><a href='https://www.hiyd.com/bb/528/' target="_blank" title='P90X-标准训练'>P90X-标准训练</a></li>
+																								<li><a href='https://www.hiyd.com/bb/442/' target="_blank" title='科里·格雷戈瑞16周增肌计划'>科里·格雷戈瑞16周增肌计划</a></li>
+																								<li><a href='https://www.hiyd.com/bb/562/' target="_blank" title='哑铃全身肌肉强化训练-新手（2练/周）'>哑铃全身肌肉强化训练-新手（2练/周）</a></li>
+																								<li><a href='https://www.hiyd.com/bb/556/' target="_blank" title='Turbo Jam 高级版'>Turbo Jam 高级版</a></li>
+																								<li><a href='https://www.hiyd.com/bb/533/' target="_blank" title='P90X Plus加量训练'>P90X Plus加量训练</a></li>
+																								<li><a href='https://www.hiyd.com/bb/467/' target="_blank" title='终极30天初学者健身指南'>终极30天初学者健身指南</a></li>
+																								<li><a href='https://www.hiyd.com/bb/523/' target="_blank" title='Insanity 60天'>Insanity 60天</a></li>
+																								<li><a href='https://www.hiyd.com/bb/501/' target="_blank" title='Rev Abs标准版'>Rev Abs标准版</a></li>
+																								<li><a href='https://www.hiyd.com/bb/439/' target="_blank" title='史蒂夫·库克12周校园增肌计划'>史蒂夫·库克12周校园增肌计划</a></li>
+																								<li><a href='https://www.hiyd.com/bb/471/' target="_blank" title='科里·格雷戈瑞每日深蹲'>科里·格雷戈瑞每日深蹲</a></li>
+																							</ul>
+																					</div>
+										<div class="tab-panel">
+																						<ul>
+																								<li><a href='//www.hiyd.com/play/course?id=16' target="_blank" title='大腿塑形 - 初级'>大腿塑形 - 初级</a></li>
+																								<li><a href='//www.hiyd.com/play/course?id=17' target="_blank" title='大腿塑形 - 中级'>大腿塑形 - 中级</a></li>
+																								<li><a href='//www.hiyd.com/play/course?id=18' target="_blank" title='大腿塑形 - 高级'>大腿塑形 - 高级</a></li>
+																								<li><a href='//www.hiyd.com/play/course?id=19' target="_blank" title='小腿线条打造 - 初级'>小腿线条打造 - 初级</a></li>
+																								<li><a href='//www.hiyd.com/play/course?id=20' target="_blank" title='小腿线条打造 - 中级'>小腿线条打造 - 中级</a></li>
+																								<li><a href='//www.hiyd.com/play/course?id=21' target="_blank" title='小腿线条打造 - 高级'>小腿线条打造 - 高级</a></li>
+																								<li><a href='//www.hiyd.com/play/course?id=34' target="_blank" title='腿部训练（P4P） - 初级'>腿部训练（P4P） - 初级</a></li>
+																								<li><a href='//www.hiyd.com/play/course?id=35' target="_blank" title='维密-美腿训练'>维密-美腿训练</a></li>
+																								<li><a href='//www.hiyd.com/play/course?id=39' target="_blank" title='大腿塑形 - 零基础'>大腿塑形 - 零基础</a></li>
+																								<li><a href='//www.hiyd.com/play/course?id=40' target="_blank" title='小腿线条打造 - 零基础'>小腿线条打造 - 零基础</a></li>
+																								<li><a href='//www.hiyd.com/play/course?id=42' target="_blank" title='腿部训练（P4P） - 中级'>腿部训练（P4P） - 中级</a></li>
+																							</ul>
+																					</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 全民健身{ -->
+<div class="o-hiyd-training">
+    <div class="training-box">
+                            <div data-hicms-tmpl="index-training-all">
+                        <div> 
+   <div class="training-section"> 
+    <h2>器械动作</h2> 
+    <ul> 
+     <li><a href="//www.hiyd.com/dongzuo/?equipment=8">哑铃</a> <a href="//www.hiyd.com/dongzuo/?equipment=10">杠铃</a> <a href="//www.hiyd.com/dongzuo/?equipment=11">壶铃</a> <a href="//www.hiyd.com/dongzuo/?equipment=20">弹力带</a> <a href="//www.hiyd.com/dongzuo/?equipment=23">TRX绳</a> <a href="//www.hiyd.com/dongzuo/?equipment=24">战绳</a> </li> 
+     <li><a href="//www.hiyd.com/dongzuo/?equipment=15">药球</a> <a href="//www.hiyd.com/dongzuo/?equipment=19">瑞士球</a> <a href="//www.hiyd.com/dongzuo/?equipment=53">波速球</a> <a href="//www.hiyd.com/dongzuo/?equipment=17">泡沫轴</a> <a href="//www.hiyd.com/dongzuo/?equipment=32">龙门架</a> </li> 
+     <li><a href="//www.hiyd.com/dongzuo/?equipment=56">推肩器</a> <a href="//www.hiyd.com/dongzuo/?equipment=37">倒蹬机</a> <a href="//www.hiyd.com/dongzuo/?equipment=38">哈克机</a> <a href="//www.hiyd.com/dongzuo/?equipment=39">腿弯举机</a> </li> 
+     <li><a href="//www.hiyd.com/dongzuo/?equipment=30">推胸机</a> <a href="//www.hiyd.com/dongzuo/?equipment=51">悍马机</a> <a href="//www.hiyd.com/dongzuo/?equipment=33">夹胸器</a> <a href="//www.hiyd.com/dongzuo/?equipment=34">划船机</a> <a href="//www.hiyd.com/dongzuo/?equipment=35">下拉机</a> </li> 
+     <li><a href="//www.hiyd.com/dongzuo/?equipment=28">单杠</a> <a href="//www.hiyd.com/dongzuo/?equipment=29">双杠</a> <a href="//www.hiyd.com/dongzuo/?equipment=26">仰卧板</a> <a href="//www.hiyd.com/dongzuo/?equipment=27">罗马椅</a> <a href="//www.hiyd.com/dongzuo/?equipment=52">牧师凳</a> </li> 
+     <li><a href="//www.hiyd.com/dongzuo/?equipment=31">史密斯机</a> <a href="//www.hiyd.com/dongzuo/?equipment=43">提踵机</a> <a href="//www.hiyd.com/dongzuo/?equipment=50">地雷架</a> <a href="//www.hiyd.com/dongzuo/?equipment=40">腿屈伸机</a> </li> 
+    </ul> 
+   </div> 
+   <div class="training-section"> 
+    <h2>新手课程</h2> 
+    <ul> 
+     <li><a href="//www.hiyd.com/xinshou/">新手专题</a>&nbsp;|&nbsp;<a href="//www.hiyd.com/zhengduoyan/">郑多燕减肥操</a></li> 
+     <li><a href="//www.hiyd.com/p4p/">P4P健身</a>&nbsp;|&nbsp;<a href="//www.hiyd.com/10minute/">10分钟健身</a></li> 
+     <li><a href="//www.hiyd.com/slim_in6/">Slim in 6</a>&nbsp;|&nbsp;<a href="//www.hiyd.com/new_slim_in6/">New Slim in 6</a></li> 
+     <li><a href="//www.hiyd.com/power90/">Power 90</a>&nbsp;|&nbsp;<a href="//www.hiyd.com/p90_2014/">P90 2014</a></li> 
+     <li><a href="//www.hiyd.com/butt_lift/">翘臀圣经</a>&nbsp;|&nbsp;<a href="//www.hiyd.com/rockinbody/">Rockin Body</a></li> 
+    </ul> 
+   </div> 
+   <div class="training-section"> 
+    <h2>进阶课程</h2> 
+    <ul> 
+     <li><a href="//www.hiyd.com/bbl/">巴西翘臀</a>&nbsp;|&nbsp;<a href="//www.hiyd.com/hiphopabs/">Hip-Hop abs</a></li> 
+     <li><a href="//www.hiyd.com/lmc/">莱美搏击操</a>&nbsp;|&nbsp;<a href="//www.hiyd.com/p90m/">P90 Master</a></li> 
+     <li><a href="//www.hiyd.com/t25/">T25健身操</a>&nbsp;|&nbsp;<a href="//www.hiyd.com/revabs/">腹肌加速训练</a></li> 
+     <li><a href="//www.hiyd.com/p90x/">P90X训练</a>&nbsp;|&nbsp;<a href="//www.hiyd.com/insanity/">Insanity</a></li> 
+     <li><a href="//www.hiyd.com/p90x2/">P90X2训练</a>&nbsp;|&nbsp;<a href="//www.hiyd.com/p90x3/">P90X3训练</a></li> 
+    </ul> 
+   </div> 
+   <div class="training-section"> 
+    <h2>明星课程</h2> 
+    <ul> 
+     <li><a href="//www.hiyd.com/qiutujianshen/">囚徒健身</a>&nbsp;|&nbsp;<a href="//www.hiyd.com/zhengduoyan/">郑多燕减肥操</a></li> 
+     <li><a href="//www.hiyd.com/guanjunzhixin/">冠军之心</a>&nbsp;|&nbsp;<a href="//www.hiyd.com/jeff_seid/">杰夫&middot;赛德</a></li> 
+     <li><a href="//www.hiyd.com/kexuejianshen/">科学健身</a>&nbsp;|&nbsp;<a href="//www.hiyd.com/steve_cook/">史蒂夫&middot;库克</a></li> 
+     <li><a href="//www.hiyd.com/p4p/">P4P健身</a>&nbsp;|&nbsp;<a href="//www.hiyd.com/fujisiliezhe/">腹肌撕裂者X</a></li> 
+     <li><a href="//www.hiyd.com/t25/">T25健身操</a>&nbsp;|&nbsp;<a href="//www.hiyd.com/p90x/">P90X训练</a></li> 
+    </ul> 
+   </div> 
+   <div class="training-section"> 
+    <h2>健身动作库</h2> 
+    <ul class="no-border"> 
+     <li><a href="//www.hiyd.com/dongzuo/?muscle=8">肱二头肌</a>&nbsp;&nbsp;<a href="//www.hiyd.com/dongzuo/?muscle=9">胸肌</a>&nbsp;&nbsp;<a href="//www.hiyd.com/dongzuo/?muscle=10">前臂</a>&nbsp;&nbsp;<a href="//www.hiyd.com/dongzuo/?muscle=24">外展肌群</a>&nbsp;&nbsp;</li> 
+     <li><a href="//www.hiyd.com/dongzuo/?muscle=11">中背部</a>&nbsp;&nbsp;<a href="//www.hiyd.com/dongzuo/?muscle=12">下背部</a>&nbsp;&nbsp;<a href="//www.hiyd.com/dongzuo/?muscle=13">颈部</a>&nbsp;&nbsp;<a href="//www.hiyd.com/dongzuo/?muscle=26">背阔肌</a>&nbsp;&nbsp;</li> 
+     <li><a href="//www.hiyd.com/dongzuo/?muscle=14">股四头肌</a>&nbsp;&nbsp;<a href="//www.hiyd.com/dongzuo/?muscle=15">腘绳肌</a>&nbsp;&nbsp;<a href="//www.hiyd.com/dongzuo/?muscle=16">小腿肌群</a>&nbsp;&nbsp;</li> 
+     <li><a href="//www.hiyd.com/dongzuo/?muscle=17">肱三头肌</a>&nbsp;&nbsp;<a href="//www.hiyd.com/dongzuo/?muscle=18">斜方肌</a>&nbsp;&nbsp;<a href="//www.hiyd.com/dongzuo/?muscle=19">肩部</a>&nbsp;&nbsp;</li> 
+     <li><a href="//www.hiyd.com/dongzuo/?muscle=20">腹肌</a>&nbsp;&nbsp;<a href="//www.hiyd.com/dongzuo/?muscle=21">臀部肌群</a>&nbsp;&nbsp;<a href="//www.hiyd.com/dongzuo/?muscle=23">内收肌群</a>&nbsp;&nbsp;<a href="//www.hiyd.com/dongzuo/?muscle=33">髂腰肌</a>&nbsp;&nbsp;</li> 
+    </ul> 
+   </div> 
+  </div>
+                    </div>    </div>
+</div>
+<!-- }全民健身 -->
+
+<div class="o-hiyd-footer">
+    
+    
+<!--     <div class="o-footer-row">
+        <div class="friendship">
+            <span class="label">友情链接</span>
+            <span class="link">
+                <a href="" class="">多玩YY</a>|
+                <a href="" class="">多玩YY</a>|
+                <a href="" class="">多玩YY</a>
+            </span>
+        </div>
+    </div> -->
+    <div class="o-footer-row">
+         <a class="footer-nav-link" href="/about/" target='_blank'>关于偶家</a>|
+        <!-- <a class="footer-nav-link" href="/s/join.html" target='_blank'>加入偶家</a>| -->
+
+        <!--<a class="footer-nav-link" href="/s/link.html" target='_blank'>友情链接</a>|-->
+        <a class="footer-nav-link" href="/sitemap/" target='_blank'>网站地图</a>|
+        <a class="footer-nav-link" href="//m.hiyd.com/dongzuo/1602/" target='_blank'>手机版本</a>|
+
+        <span>Copyright (C) 2018 www.hiyd.com 版权所有 广州市偶家科技有限公司</span>
+    </div>
+    <div class="o-footer-row">
+       <span>粤网文（2015）1655-286号</span> | <span>粤ICP备15035085号-3</span>
+    </div>
+
+    </div>
+<script>
+    if(document.getElementById("o-goH5Link")) {
+        document.getElementById("o-goH5Link").onclick = function(){
+            var time = new Date();
+            time.setTime(time.getTime() - 1 * 864e+5);
+            time = time.toUTCString();
+            document.cookie = "visit_type=; expires=" + time + "; path=/;" + " domain=hiyd.com";
+        }
+    }
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        var param = /ku\.hiyd\.com/.test(location.href) ? '70460135948fe5b1164e623fd4113858' : '27e0b89fc1f2e9d960a18d82d5f98dbd';
+        hm.src = "//hm.baidu.com/hm.js?" + param;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+
+        (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+
+
+    (function(){
+        var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?0e667df2e5b0a308dc981bf95485638e":"https://jspassport.ssl.qhimg.com/11.0.1.js?0e667df2e5b0a308dc981bf95485638e";
+        document.write('<script src="' + src + '" id="sozz"><\/script>');
+    })();
+
+
+    </script>	</div>
+	<script>
+		seajs.use(['js/exercise.js?d19f975cf2ba47e4'],function(e) {
+			e.init({"id":"1602","create_time":"2016-11-02 11:00:13","name":"\u5f39\u529b\u5e26\u76f4\u817f\u786c\u62c9","eng_name":"","description":"1\u3001\u4e24\u811a\u5206\u7acb\uff0c\u4fef\u8eab\uff0c\u4fdd\u6301\u80a9\u5173\u8282\u5728\u819d\u76d6\u7684\u524d\u65b9\uff0c\u63e1\u7d27\u5f39\u529b\u7ef3\uff0c\u8fd9\u662f\u4f60\u7684\u8d77\u59cb\u4f4d\u7f6e\u3002\r\n2\u3001\u6536\u7f29\u81c0\u90e8\u548c\u5927\u817f\u540e\u4fa7\u4f7f\u8eab\u4f53\u6062\u590d\u76f4\u7acb\u59ff\u6001\uff0c\u8fc7\u7a0b\u4e2d\u4fdd\u6301\u819d\u5173\u8282\u81ea\u7136\u4f38\u76f4\u3002","difficulty":"9","muscle_id":"15","coach_gender":"0","group_id":null,"category_id":"3","created_from":"0","status":"1","ext_info":null,"web_mvideo_id":null,"web_fvideo_id":null,"extra_equipment_type":null,"equipment_ids":"20","tpoints":"10","equipments":[{"id":"20","create_time":"2016-04-19 12:55:17","name":"\u5f39\u529b\u5e26","pic":"","show_type":"0","equipment_group":"1","sort_num":"4"}],"trainingPoints":"\u817f\u90e8","difficulty_name":"\u4e2d\u7ea7","gender_group":{"male":true,"female":true},"category_name":"\u4e0b\u80a2","muscle_name":"\u8158\u7ef3\u808c","otherMuscles":[],"exe_explain_pic":[{"name":null,"url":"http:\/\/image.yy.com\/ojiastoreimage\/1479708689023_am__len80753.jpg","desc":"1\u3001\u4e24\u811a\u5206\u7acb\uff0c\u4fef\u8eab\uff0c\u4fdd\u6301\u80a9\u5173\u8282\u5728\u819d\u76d6\u7684\u524d\u65b9\uff0c\u63e1\u7d27\u5f39\u529b\u7ef3\uff0c\u8fd9\u662f\u4f60\u7684\u8d77\u59cb\u4f4d\u7f6e\u3002"},{"name":null,"url":"http:\/\/image.yy.com\/ojiastoreimage\/1479708712383_am__len74699.jpg","desc":"\r1\u3001\u6536\u7f29\u81c0\u90e8\u548c\u5927\u817f\u540e\u4fa7\u4f7f\u8eab\u4f53\u6062\u590d\u76f4\u7acb\u59ff\u6001\uff0c\u8fc7\u7a0b\u4e2d\u4fdd\u6301\u819d\u5173\u8282\u81ea\u7136\u4f38\u76f4\u3002"}],"video_id":"11660","pic":"https:\/\/w2.dwstatic.com\/yy\/ojiastoreimage\/20161028_0c8a547286e5697d4d4fda2c2f49cce6.jpg","gif":null,"detail_video_id":null,"muscle_pic":"https:\/\/image.yy.com\/ojiastoreimage\/abd8b44e861fdfa13bc566e07ac97c18.gif","video_url":"https:\/\/dw-w6.dwstatic.com\/56\/11\/1643\/3443676-151-1477646988.mp4","detail_video_url":null,"split_time":null,"muscle_front_img":"https:\/\/image.yy.com\/ojiastoreimage\/1476955150690_am__len53226.png","muscle_back_img":"https:\/\/w2.dwstatic.com\/yy\/ojiastoreimage\/1479725235571_am_","definition_group":[{"definition":1300,"name":"\u8d85\u6e05","url":"https:\/\/dw-w6.dwstatic.com\/52\/12\/1643\/3443676-100-1477646988.mp4","length":4034,"size":"444908","is_default":false},{"definition":"yuanhua","name":"\u539f\u753b","url":"https:\/\/dw-w6.dwstatic.com\/56\/11\/1643\/3443676-151-1477646988.mp4","length":4034,"size":"1037977","is_default":true}]});
+		});
+	</script>
+</body>
+</html>

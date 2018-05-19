@@ -1,7 +1,6 @@
 import urllib.request
 import pickle
 import re
-import numpy as np
 from pymongo import MongoClient
 import pymongo
 
@@ -95,5 +94,5 @@ for i, element in enumerate(add_group):
         data = Muscle_lib(url_newadd)
         muscle_temp.append(data.start_muscle_related())
     muscle['name'] = muscle_group[i]
-    muscle['muscleGroup'] = str(muscle_temp).replace('[','').replace(']','').replace('\'','')
+    muscle['muscleGroup'] = str(muscle_temp).replace('[', '').replace(']','').replace('\'','')
     ActionTable.insert_one(muscle)

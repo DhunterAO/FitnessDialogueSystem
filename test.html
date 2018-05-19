@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <title>vue-chat</title>
+      <style>
+          * {
+              box-sizing: border-box;
+          }
+          *:before, *:after {
+              box-sizing: inherit;
+          }
+          body, html {
+              height: 100%;
+              overflow: hidden;
+          }
+          body, ul {
+              margin: 0;
+              padding: 0;
+          }
+          body {
+              color: #4d4d4d;
+              font: 14px/1.4em 'Helvetica Neue', Helvetica, 'Microsoft Yahei', Arial, sans-serif;
+              background: #f5f5f5 url('bg.jpg') no-repeat center;
+              background-size: cover;
+              font-smoothing: antialiased;
+          }
+          ul {
+              list-style: none;
+          }
+      </style>
+    <style type="text/css">
+      #app[_v-eda17dc8]{margin:20px auto;width:800px;height:600px;overflow:hidden;border-radius:3px}
+      #app .main[_v-eda17dc8],
+      #app .sidebar[_v-eda17dc8]{height:100%}
+      #app .sidebar[_v-eda17dc8]{float:left;width:200px;color:#f4f4f4;background-color:#2e3238}
+      #app .main[_v-eda17dc8]{position:relative;overflow:hidden;background-color:#eee}
+      #app .text[_v-eda17dc8]{position:absolute;width:100%;bottom:0;left:0}
+      #app .message[_v-eda17dc8]{height:calc(100% - 160px)}
+    </style>
+    <style type="text/css">
+      .card[_v-703c2504]{padding:12px;border-bottom:1px solid #24272c}
+      .card footer[_v-703c2504]{margin-top:10px}.card .avatar[_v-703c2504],
+      .card .name[_v-703c2504]{vertical-align:middle}
+      .card .avatar[_v-703c2504]{border-radius:2px}
+      .card .name[_v-703c2504]{display:inline-block;margin:0 0 0 15px;font-size:16px}
+      .card .search[_v-703c2504]{padding:0 10px;width:100%;font-size:12px;color:#fff;height:30px;line-height:30px;border:1px solid #3a3a3a;border-radius:4px;outline:none;background-color:#26292e}
+    </style>
+    <style type="text/css">
+      .list li[_v-7e2238dc]{padding:12px 15px;border-bottom:1px solid #292c33;cursor:pointer;transition:background-color .1s}
+      .list li[_v-7e2238dc]:hover{background-color:hsla(0,0%,100%,.03)}
+      .list li.active[_v-7e2238dc]{background-color:hsla(0,0%,100%,.1)}
+      .list .avatar[_v-7e2238dc],.list .name[_v-7e2238dc]{vertical-align:middle}
+      .list .avatar[_v-7e2238dc]{border-radius:2px}
+      .list .name[_v-7e2238dc]{display:inline-block;margin:0 0 0 15px}
+    </style>
+    <style type="text/css">
+      .btn[_v-34e798a2]{height: 50px;width: 100px;color: #FFF;background: #3dbb2b; margin-left: 10px; margin-bottom: 20px;}
+      .text[_v-34e798a2]{height:160px;border-top:1px solid #ddd}
+      .context[_v-34e798a2]{height:160px;width:460px;}
+    </style>
+    <style type="text/css">
+      .text[_v-34e798a1]{height:160px;border-top:1px solid #ddd}
+      .context[_v-34e798a1]{height:160px;width:160px;}
+      .text textarea[_v-34e798a1]{padding:10px;height:100%;width:100%;border:none;outline:none;font-family:Micrsofot Yahei;resize:none}
+    </style>
+    <style type="text/css">
+      .message[_v-ba226b7a]{padding:10px 15px;overflow-y:scroll}
+      .message li[_v-ba226b7a]{margin-bottom:15px}
+      .message .time[_v-ba226b7a]{margin:7px 0;text-align:center}
+      .message .time>span[_v-ba226b7a]{display:inline-block;padding:0 18px;font-size:12px;color:#fff;border-radius:2px;background-color:#dcdcdc}
+      .message .avatar[_v-ba226b7a]{float:left;margin:0 10px 0 0;border-radius:3px}
+      .message .text[_v-ba226b7a]{display:inline-block;position:relative;padding:0 10px;max-width:calc(100% - 40px);min-height:30px;line-height:2.5;font-size:12px;text-align:left;word-break:break-all;background-color:#fafafa;border-radius:4px}
+      .message .text[_v-ba226b7a]:before{content:" ";position:absolute;top:9px;right:100%;border:6px solid transparent;border-right-color:#fafafa}.message .self[_v-ba226b7a]{text-align:right}.message .self .avatar[_v-ba226b7a]{float:right;margin:0 0 0 10px}
+      .message .self .text[_v-ba226b7a]{background-color:#b2e281}
+      .message .self .text[_v-ba226b7a]:before{right:inherit;left:100%;border-right-color:transparent;border-left-color:#b2e281}
+    </style>
+    <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+  </head>
+
+  <body>
+    <div id="app" _v-eda17dc8="">
+      <div class="sidebar" _v-eda17dc8="">
+        <div class="card" _v-703c2504="" _v-eda17dc8="">
+          <header _v-703c2504="">
+            <img class="avatar" width="40" height="40" _v-703c2504="" alt="coffce" src="1.jpg">
+            <p class="name" _v-703c2504="">User</p>
+          </header>
+          <footer _v-703c2504="">
+            <input class="search" type="text" placeholder="search user..." _v-703c2504="">
+          </footer>
+        </div>
+        <div class="list" _v-7e2238dc="" _v-eda17dc8="">
+          <ul _v-7e2238dc="">
+            <li _v-7e2238dc="" class="active">
+              <img class="avatar" width="30" height="30" _v-7e2238dc="" alt="示例介绍" src="2.png">
+              <p class="name" _v-7e2238dc="">健身问答系统</p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="main" _v-eda17dc8="">
+        <div class="message" _v-ba226b7a="" _v-eda17dc8="">
+          <ul id="textContext" _v-ba226b7a="">
+            <li _v-ba226b7a="">
+              <div class="main" _v-ba226b7a="">
+                <img class="avatar" width="30" height="30" _v-ba226b7a="" src="2.png">
+                <div class="text" _v-ba226b7a="">
+                  你好，我是健身问答系统，为您回答与健身相关的问题，请在下面文本框中输入问题。
+                </div>
+              </div>
+            </li>
+            <li _v-ba226b7a="">
+              <div class="main self" _v-ba226b7a="">
+                <img class="avatar" width="30" height="30" _v-ba226b7a="" src="1.jpg">
+                <div class="text" _v-ba226b7a="">asdf</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="text" _v-34e798a1="" _v-eda17dc8="">
+          <textarea id="textBox" class="context" _v-34e798a2=""></textarea>
+          <button _v-34e798a2="" class="btn" onclick="sendTextMessage()">Send</button>
+        </div>
+      </div>
+    </div>
+
+</body></html>
