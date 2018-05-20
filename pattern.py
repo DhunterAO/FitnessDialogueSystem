@@ -1,11 +1,12 @@
 from solve import *
 
 patternList = {
+
                   ('action', '肌肉'): 0,  # 卧推锻炼哪些肌肉
                   ('action', '炼', '肌肉'):34,
                   ('action', '练', '肌肉'):35,
                   ('action', 'muscle'): 1,  # 俯卧撑除了练腹肌
-                  ('action'): 2,  # Q1怎样做俯卧撑 Q2俯卧撑
+                  ('action'): 2,  # Q1怎样做俯卧撑 Q2俯卧撑     #########
                   ('练', 'muscle'): 3,  # 怎么样可以锻炼腹肌
                   ('action', '要', '器'): 4,  # 平板支撑需要什么器械/道具/设备/条件 #4
 
@@ -16,7 +17,7 @@ patternList = {
                   ('action', '练'): 9,  # 卧推怎么练 #9
 
                     ('action', '注意'): 10,  # 卧推要有什么特别注意事项
-                    ('machine', 'muscle', 'special'): 11,  # 哑铃练肱二头肌有效果吗
+                    ('machine', 'special', 'muscle'): 11,  # 哑铃练肱二头肌有效果吗  ####
                     ('muscle', '拉伸'):12,  # 背阔肌怎样拉伸
                     ('machine', '动作'):13,  # 哑铃主要可以做哪些动作
                     ('machine', 'action', 'muscle'):14,  # 哑铃卧推怎样锻炼到胸中束  #14 5.17号解决以上pattern
@@ -86,6 +87,10 @@ def pattern_match(pattern, sentence):
             if sentence[i][0] == 'muscle':
                 continue
             return False
+        if pattern[i] == 'special':
+            if sentence[i][0] == 'special':
+                continue
+            return False
         if sentence[i][1] == pattern[i]:
             continue
         return False
@@ -96,6 +101,11 @@ def pattern(sentence):
     for p in patternList:
         # print(index)
         index = patternList[p]
+        if type(p) != tuple:
+            temp = []
+            temp.append(p)
+            p = temp
+
 
         if pattern_match(p, sentence):
             print(sentence)
@@ -127,27 +137,27 @@ def pattern(sentence):
             if index == 14:
                 return get_details_of_action(sentence[1][1])
             if index == 15:
-                print_welcoming()
+                return welcoming()
             if index == 16:
-                print_goodbye()
+                return goodbye()
             if index == 17 or index == 18:
-                water_replenishing()
+                return water_replenishing()
             if index == 19:
-                energy_replenishing()
+                return energy_replenishing()
             if index == 20 or index == 21 or index == 22 or index == 23:
-                fitness_protection()
+                return fitness_protection()
             if index == 24 or index == 25:
-                musculus_muscle()
+                return musculus_muscle()
             if index == 26 or index == 27 or index == 29:
-                lose_weight()
+                return lose_weight()
             if index == 28:
-                increase_weight()
+                return increase_weight()
             if index == 30:
-                relax()
+                return relax()
             if index == 31 or index == 32:
-                energy_replenishing()
+                return energy_replenishing()
             if index == 33:
-                fitness_planing()
+                return fitness_planing()
 
     return 'unknown'
 
@@ -156,6 +166,7 @@ if __name__ == '__main__':
     # print(pattern([('action', '平板支撑'), ('special', '肌肉')]))
     # print(pattern([('action', '平板支撑'), ('muscle', '腹肌')]))
     # print(pattern([('action', '平板支撑')]))
+    print(pattern([('special','规划')]))
     # print(pattern([('action', '平板支撑'), ('special','有效')]))
     # print(pattern([('special', '可以'), ('muscle', '腹肌')]))
     # print(pattern([('action', '平板支撑'), ('special', '器材')]))
