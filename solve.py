@@ -67,7 +67,7 @@ def get_muscle_of_equipments(equipment):
     for i in res:
         if i['equipment'] == equipment:
             if i['mainMuscle'] not in muscle_list:
-                muscle_list.append(i['equipment'])
+                muscle_list.append(i['mainMuscle'])
     return muscle_list
 
 def get_actionlist_of_action(action):
