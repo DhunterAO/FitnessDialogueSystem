@@ -42,6 +42,8 @@ class Action:
         return self.level
 
     def get_details(self):
+        temp = str(self.details)
+        self.details =  temp.replace('\'','').replace('\\r','').replace('\\n','\n')
         return self.details
 
     def get_describe(self):
