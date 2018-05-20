@@ -3,6 +3,7 @@ from solve import *
 patternList = {
                   ('action', '肌肉'): 0,  # 卧推锻炼哪些肌肉
                   ('action', '炼', '肌肉'):34,
+                  ('action', '练', '肌肉'):35,
                   ('action', 'muscle'): 1,  # 俯卧撑除了练腹肌
                   ('action'): 2,  # Q1怎样做俯卧撑 Q2俯卧撑
                   ('练', 'muscle'): 3,  # 怎么样可以锻炼腹肌
@@ -98,7 +99,7 @@ def pattern(sentence):
 
         if pattern_match(p, sentence):
             print(sentence)
-            if index == 0 or index ==34:
+            if index == 0 or index == 34 or index == 35:
                 return get_muscle_of_action(sentence[0][1])
             if index == 1:
                 return get_actionlist_of_muscleGroup(sentence[1][1])
