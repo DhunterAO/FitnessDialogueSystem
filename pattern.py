@@ -5,12 +5,13 @@ patternList = {
                   ('action', '肌肉'): 0,  # 卧推锻炼哪些肌肉
                   ('action', '炼', '肌肉'):34,
                   ('action', '练', '肌肉'):35,
-                  ('action', 'muscle'): 1,  # 俯卧撑除了练腹肌
+                  ('action', 'negative', 'muscle'): 1,  # 俯卧撑除了练腹肌
                   ('action'): 2,  # Q1怎样做俯卧撑 Q2俯卧撑     #########
                   ('练', 'muscle'): 3,  # 怎么样可以锻炼腹肌
                   ('action', '要', '器'): 4,  # 平板支撑需要什么器械/道具/设备/条件 #4
 
                   ('action', '动作'): 5,  # 跟仰卧起坐差不多的动作有什么
+                  ('action', 'special', 'special'):38,
                   ('muscle', '练'): 6,  # 腹肌怎么练
                   ('muscle', '炼'): 7,  # 腹肌怎么锻炼
                   ('action', '炼'): 8,  # 卧推怎么锻炼
@@ -44,7 +45,9 @@ patternList = {
                     ('健身', '休息'):30,  # 健身后如何合理休息  #30
                     ('健身', '注意', '饮食'):31,  # 健身期间如何注意饮食搭配
                     ('健身', '饮食'):32,  # 健身中的饮食搭配 健身后的饮食搭配 健身如何进行饮食搭配
-                    ('规划'):33  # 能给我提点简单的训练时间规划吗（主要是不同训练阶段的频次安排，每周几练，时间间隔等）
+                    ('规划'):33, # 能给我提点简单的训练时间规划吗（主要是不同训练阶段的频次安排，每周几练，时间间隔等）
+                    ('muscle'):36, #
+                    ('machine','special','muscle'):37 #哑铃练肱二头肌有效果吗
 
 
 # ('machine', 'action', 'muscle'),  # 哑铃卧推怎样锻炼到胸中束
@@ -91,6 +94,14 @@ def pattern_match(pattern, sentence):
             if sentence[i][0] == 'special':
                 continue
             return False
+        if pattern[i] == 'negative':
+            if sentence[i][0] == 'negative':
+                continue
+            return False
+        if pattern[i] == 'machine':
+            if sentence[i][0] == 'machine':
+                continue
+            return False
         if sentence[i][1] == pattern[i]:
             continue
         return False
@@ -112,7 +123,7 @@ def pattern(sentence):
             if index == 0 or index == 34 or index == 35:
                 return get_muscle_of_action(sentence[0][1])
             if index == 1:
-                return get_actionlist_of_muscleGroup(sentence[1][1])
+                return get_muscle_of_action(sentence[0][1])
             if index == 2:
                 return get_details_of_action(sentence[0][1])
                 # return get_describe_of_action(sentence[0][1])
@@ -120,15 +131,15 @@ def pattern(sentence):
                 return  get_actionlist_of_muscleGroup(sentence[1][1])
             if index == 4:
                 return get_equipment_of_action(sentence[0][1])
-            if index == 5:
+            if index == 5 or index == 38:
                 return get_actionlist_of_action(sentence[0][1])
-            if index == 6 or index == 7:
+            if index == 6 or index == 7 or index == 36:
                 return get_actionlist_of_muscleGroup(sentence[0][1])
             if index == 8 or index == 9:
                 return get_details_of_action(sentence[0][1])
             if index == 10:
                 return get_details_of_action(sentence[0][1])
-            if index == 11:
+            if index == 11 or index == 37:
                 return get_muscle_of_equipments(sentence[0][1])
             if index == 12:
                 return get_actionlist_of_muscleGroup(sentence[0][1])
@@ -166,7 +177,7 @@ if __name__ == '__main__':
     # print(pattern([('action', '平板支撑'), ('special', '肌肉')]))
     # print(pattern([('action', '平板支撑'), ('muscle', '腹肌')]))
     # print(pattern([('action', '平板支撑')]))
-    print(pattern([('special','规划')]))
+    print(pattern([('action', '平板支撑'), ('negative', '除'), ('muscle', '腹肌')]))
     # print(pattern([('action', '平板支撑'), ('special','有效')]))
     # print(pattern([('special', '可以'), ('muscle', '腹肌')]))
     # print(pattern([('action', '平板支撑'), ('special', '器材')]))
