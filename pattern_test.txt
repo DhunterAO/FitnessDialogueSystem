@@ -1,0 +1,68 @@
+卧推锻炼哪些肌肉
+[('special', '肌肉')]
+unknown
+
+俯卧撑除了练腹肌
+[('action', '俯卧撑'), ('negative', '除'), ('muscle', '腹肌')]
+unknown
+
+怎么样可以锻炼腹肌
+[('muscle', '腹肌')]
+unknown
+
+平板支撑需要什么器械
+[('action', '平板支撑')]
+unknown
+
+跟仰卧起坐差不多的动作有什么
+[]
+unknown
+
+腹肌怎么锻炼
+[('muscle', '腹肌')]
+unknown
+
+卧推怎么锻炼
+[('action', '卧推')]
+unknown
+
+卧推怎么练
+File "/Users/luke/PycharmProjects/FitnessDialogueSystem/action.py", line 11, in __init__
+    self.mainMuscle = res['mainMuscle']
+TypeError: 'NoneType' object is not subscriptable
+
+哑铃练肱二头肌有效果吗
+[('machine', '哑铃'), ('special', '练'), ('muscle', '肱二头肌')]
+unknown
+
+哑铃主要可以做哪些动作
+[('machine', '哑铃'), ('special', '动作')]
+unknown
+
+哑铃卧推怎样锻炼到胸中束
+[]
+unknown
+
+你好，我想了解一些健身健身方面的知识
+[('special', '了解')]
+unknown
+
+对我很有帮助，谢谢啦
+[('special', '谢谢')]
+unknown
+
+锻炼怎样补充水
+[]
+unknown
+
+锻炼怎样补充水
+[]
+unknown
+
+锻炼能量怎样补充
+[]
+unknown
+
+深蹲怎样保护自己
+[]
+unknown
