@@ -56,7 +56,7 @@ if __name__ == '__main__':
     questionInstance = Question()
 
     # step 2: invoke questionCut function,
-    question = "卧推锻炼哪些肌肉"
+    question = "卧推锻炼了哪些肌肉？"
     print(question)
     print(questionInstance.questionCut(question))
 
