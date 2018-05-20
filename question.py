@@ -29,13 +29,14 @@ class Question:
                 for line in file.readlines():
                     list.append(line.strip())
             if list != []:
-                self.matchPattern[str(pattern)] = re.compile(str(list) + str('+'), re.I | re.M)
+                self.matchPattern[str(pattern)] = re.compile(str("[(?=") + "),(?=".join(list)+str(')]+'), re.I | re.M)
                 self.patternSet[str(pattern)] = set(list)
             else:
                 self.matchPattern[str(pattern)] = None
 
     def questionCut(self, question):
         matchResult = []
+
         for pattern in Question.patternList:
             if self.matchPattern[str(pattern)] == None:
                 continue
@@ -49,6 +50,18 @@ class Question:
         matchResult.sort(key=lambda x:(x[2]))
         return matchResult
 
+    def questionCut2(self, question):
+        matchResult = []
+        for pattern in Question.patternList:
+            index = 0
+            for word in self.patternSet[str(pattern)]:
+                tmp = question.find(word)
+                if tmp != -1:
+                    index = tmp
+                    matchResult.append((str(pattern), word, tmp))
+        matchResult.sort(key=lambda x: (x[2]))
+        return matchResult
+
 if __name__ == '__main__':
 
     # usage demo
@@ -56,10 +69,12 @@ if __name__ == '__main__':
     questionInstance = Question()
 
     # step 2: invoke questionCut function,
-    question = "卧推锻炼了哪些肌肉？"
+    question = "深蹲怎样保护自己"
     print(question)
     print(questionInstance.questionCut(question))
+    print(questionInstance.questionCut2(question))
 
     question = "平板支撑锻炼肌肉要多少天才有效果?"
     print(question)
     print(questionInstance.questionCut(question))
+    print(questionInstance.questionCut2(question))
