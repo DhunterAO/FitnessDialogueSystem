@@ -2,6 +2,7 @@ from solve import *
 
 patternList = {
                   ('action', '肌肉'): 0,  # 卧推锻炼哪些肌肉
+                  ('action', '炼', '肌肉'):34,
                   ('action', 'muscle'): 1,  # 俯卧撑除了练腹肌
                   ('action'): 2,  # Q1怎样做俯卧撑 Q2俯卧撑
                   ('练', 'muscle'): 3,  # 怎么样可以锻炼腹肌
@@ -13,43 +14,35 @@ patternList = {
                   ('action', '炼'): 8,  # 卧推怎么锻炼
                   ('action', '练'): 9,  # 卧推怎么练 #9
 
-                  ('action', '肌肉'):10,  # 卧推锻炼哪些肌肉
-                  ('action', 'muscle'):11,  # 俯卧撑除了练腹肌
-                  ('action'):12,  # Q1怎样做俯卧撑 Q2俯卧撑
-                  ('练', 'muscle'):13,  # 怎么样可以锻炼腹肌
-                  ('action', '器'):14,  # 平板支撑需要什么器械/道具/设备/条件 #4
-
-                  ('machine', 'action', 'muscle'): 15,  # 哑铃卧推怎样锻炼到胸中束  #14  5.17号解决以上pattern
-
-                    ('action', '注意'): 16,  # 卧推要有什么特别注意事项
-                    ('machine', 'muscle', 'special'): 17,  # 哑铃练肱二头肌有效果吗
-                    ('muscle', '拉伸'):18,  # 背阔肌怎样拉伸
-                    ('machine', '动作'):19,  # 哑铃主要可以做哪些动作
-                    ('machine', 'action', 'muscle'):20,  # 哑铃卧推怎样锻炼到胸中束  #14 5.17号解决以上pattern
+                    ('action', '注意'): 10,  # 卧推要有什么特别注意事项
+                    ('machine', 'muscle', 'special'): 11,  # 哑铃练肱二头肌有效果吗
+                    ('muscle', '拉伸'):12,  # 背阔肌怎样拉伸
+                    ('machine', '动作'):13,  # 哑铃主要可以做哪些动作
+                    ('machine', 'action', 'muscle'):14,  # 哑铃卧推怎样锻炼到胸中束  #14 5.17号解决以上pattern
 
                     # （因为这些关键词只要有一个较为完整的回答基本就够了，问的比较频繁）##更新于5.18
-                    ('了解', '健身'):21,  # 你好，我想了解一些健身健身方面的知识（返回问候语和一些鼓励的话）#15
-                    ('谢谢'):22,  # 对我很有帮助，谢谢啦（返回励志的话）
-                    ('炼', '补充水'):23,  # 锻炼怎样补充水
-                    ('炼', '补水'):24,  # 锻炼怎样补充水
-                    ('炼', '补充能量'):25,  # 锻炼能量怎样补充
+                    ('了解', '健身'):15,  # 你好，我想了解一些健身健身方面的知识（返回问候语和一些鼓励的话）#15
+                    ('谢谢'):16,  # 对我很有帮助，谢谢啦（返回励志的话）
+                    ('炼', '补充水'):17,  # 锻炼怎样补充水
+                    ('炼', '补水'):18,  # 锻炼怎样补充水
+                    ('炼', '补充能量'):19,  # 锻炼能量怎样补充
 
-                    ('action', '保护'):26,  # 深蹲怎样保护自己   #20
-                    ('action', '避免'):27,  # 深度怎么避免受伤
-                    ('健身', '保护'):28,  # 健身中怎么保护自己
-                    ('健身', '避免'):29,  # 健身中怎么避免受伤
+                    ('action', '保护'):20,  # 深蹲怎样保护自己   #20
+                    ('action', '避免'):21,  # 深度怎么避免受伤
+                    ('健身', '保护'):22,  # 健身中怎么保护自己
+                    ('健身', '避免'):23,  # 健身中怎么避免受伤
 
-                    ('增肌', '动作'):30,  # 增肌该做些什么动作  # 24
-                    ('增肌'):31,  # 增肌该怎么做     #25
-                    ('减脂'):32,  # 减脂该怎么做
-                    ('减肥'):33,  # 减肥该怎么做
-                    ('增重'):34,  # 增重该怎么做
-                    ('减重'):35,  # 减重该怎么做
+                    ('增肌', '动作'):24,  # 增肌该做些什么动作  # 24
+                    ('增肌'):25,  # 增肌该怎么做     #25
+                    ('减脂'):26,  # 减脂该怎么做
+                    ('减肥'):27,  # 减肥该怎么做
+                    ('增重'):28,  # 增重该怎么做
+                    ('减重'):29,  # 减重该怎么做
 
-                    ('健身', '休息'):36,  # 健身后如何合理休息  #30
-                    ('健身', '注意', '饮食'):37,  # 健身期间如何注意饮食搭配
-                    ('健身', '饮食'):38,  # 健身中的饮食搭配 健身后的饮食搭配 健身如何进行饮食搭配
-                    ('规划'):39  # 能给我提点简单的训练时间规划吗（主要是不同训练阶段的频次安排，每周几练，时间间隔等）
+                    ('健身', '休息'):30,  # 健身后如何合理休息  #30
+                    ('健身', '注意', '饮食'):31,  # 健身期间如何注意饮食搭配
+                    ('健身', '饮食'):32,  # 健身中的饮食搭配 健身后的饮食搭配 健身如何进行饮食搭配
+                    ('规划'):33  # 能给我提点简单的训练时间规划吗（主要是不同训练阶段的频次安排，每周几练，时间间隔等）
 
 
 # ('machine', 'action', 'muscle'),  # 哑铃卧推怎样锻炼到胸中束
@@ -105,33 +98,33 @@ def pattern(sentence):
 
         if pattern_match(p, sentence):
             print(sentence)
-            if index == 0:
+            if index == 0 or index ==34:
                 return get_muscle_of_action(sentence[0][1])
             if index == 1:
-                return get_muscleGroup_action(sentence[1][1])
+                return get_actionlist_of_muscleGroup(sentence[1][1])
             if index == 2:
-                if sentence[0][2] != 0:
-                    return get_details_of_action(sentence[0][1])
-                else:
-                    return get_describe_of_action(sentence[0][1])
-            if index == 3:
                 return get_details_of_action(sentence[0][1])
+                # return get_describe_of_action(sentence[0][1])
+            if index == 3:
+                return  get_actionlist_of_muscleGroup(sentence[1][1])
             if index == 4:
                 return get_equipment_of_action(sentence[0][1])
             if index == 5:
-                return get_muscleGroup_action(sentence[0][1])
+                return get_actionlist_of_action(sentence[0][1])
             if index == 6 or index == 7:
-                return get_muscleGroup_action(sentence[0][1])
-            if index == 8 or index == 9 or index == 10:
+                return get_actionlist_of_muscleGroup(sentence[0][1])
+            if index == 8 or index == 9:
+                return get_details_of_action(sentence[0][1])
+            if index == 10:
                 return get_details_of_action(sentence[0][1])
             if index == 11:
                 return get_muscle_of_equipments(sentence[0][1])
             if index == 12:
-                return get_muscleGroup_action(sentence[0][1])
+                return get_actionlist_of_muscleGroup(sentence[0][1])
             if index == 13:
-                return get_action_of_euqipments(sentence[0][1])
+                return get_actionlist_of_euqipments(sentence[0][1])
             if index == 14:
-                return get_muscleGroup_action(sentence[1][1])
+                return get_details_of_action(sentence[1][1])
             if index == 15:
                 print_welcoming()
             if index == 16:
@@ -161,7 +154,7 @@ def pattern(sentence):
 if __name__ == '__main__':
     # print(pattern([('action', '平板支撑'), ('special', '肌肉')]))
     # print(pattern([('action', '平板支撑'), ('muscle', '腹肌')]))
-    print(pattern([('action', '平板支撑', 0)]))
+    # print(pattern([('action', '平板支撑')]))
     # print(pattern([('action', '平板支撑'), ('special','有效')]))
     # print(pattern([('special', '可以'), ('muscle', '腹肌')]))
     # print(pattern([('action', '平板支撑'), ('special', '器材')]))
