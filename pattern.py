@@ -50,10 +50,14 @@ def get_equipmentlist_of_muscle(muscle):
 def get_actionlist_of_euqipments(equipment):
     res = Mongo.action.find()
     action_list = []
+    count = 0
     for i in res:
         if i['equipment'] == equipment:
             if i['name'] not in action_list:
+                if count == 4:
+                    break
                 action_list.append(i['name'])
+                count += 1
     return action_list
 
 
@@ -64,23 +68,31 @@ def clothes_advice():
 def get_muscle_of_equipments(equipment):
     res = Mongo.action.find()
     muscle_list = []
+    count = 0;
     for i in res:
         if i['equipment'] == equipment:
             if i['mainMuscle'] not in muscle_list:
+                if count == 4:
+                    break
                 muscle_list.append(i['mainMuscle'])
+                count += 1
     return muscle_list
 
 def get_actionlist_of_action(action):
     res = Mongo.action.find()
     action_list = []
+    count = 0
     for i in res:
         if i['name'] == action:
             muscle_temp = i['mainMuscle']
             break
     for i in res:
         if i['mainMuscle'] == muscle_temp:
+            if count == 4:
+                break
             if i['name'] not in action_list:
                 action_list.append(i['name'])
+            count += 1
     return action_list
 
 def welcoming():
