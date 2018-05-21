@@ -1,217 +1,156 @@
-from solve import *
+from action import *
+from muscle import *
+import re
 
-patternList = {
-
-                  ('action', '肌肉'): 0,  # 卧推锻炼哪些肌肉
-                  ('action', '炼', '肌肉'):34,
-                  ('action', '练', '肌肉'):35,
-                  ('action', 'negative', 'muscle'): 1,  # 俯卧撑除了练腹肌
-                  ('action'): 2,  # Q1怎样做俯卧撑 Q2俯卧撑     #########
-                  ('练', 'muscle'): 3,  # 怎么样可以锻炼腹肌
-                  ('action', '要', 'machin'): 4,  # 平板支撑需要什么器械/道具/设备/条件 #4
-                  ('action', '动作'): 5,  # 跟仰卧起坐差不多的动作有什么
-                  ('action', 'special', 'special'):38,  #卧推锻炼哪些肌肉
-                  ('muscle', '练'): 6,  # 腹肌怎么练
-                  ('muscle', '炼'): 7,  # 腹肌怎么锻炼
-                  ('action', '炼'): 8,  # 卧推怎么锻炼
-                  ('action', '练'): 9,  # 卧推怎么练 #9
-                    ('special', 'muscle'):39,
-                    ('action', '注意'): 10,  # 卧推要有什么特别注意事项
-                  ('action', 'special', 'muscle'):42, #unset
-                    ('action','锻炼'): 41, # ok
-                    ('special', 'muscle'):39,
-                    ('action', '注意'): 10,  # 卧推要有什么特别注意事项 # ok
-
-                    ('machine', 'special', 'muscle'): 11,  # 哑铃练肱二头肌有效果吗  ####
-                    ('muscle', '拉伸'):12,  # 背阔肌怎样拉伸
-                    ('machine', '动作'):13,  # 哑铃主要可以做哪些动作
-                    ('machine', 'action', 'muscle'):14,  # 哑铃卧推怎样锻炼到胸中束  #14 5.17号解决以上pattern # ok
-                    ('action', 'machine'):40, #平板支撑需要什么器械 # ok
-                    # （因为这些关键词只要有一个较为完整的回答基本就够了，问的比较频繁）##更新于5.18
-                    ('你好','了解'):15,  # 你好，我想了解一些健身健身方面的知识（返回问候语和一些鼓励的话）#15
-                    ('健身'):43,
-                    ('谢谢'):16,  # 对我很有帮助，谢谢啦（返回励志的话）
-                    ('special', '补充水'):17,  # 锻炼怎样补充水
-                    ('special', '补水'):18,  # 锻炼怎样补充水
-                    ('special', '补充能量'):19,  # 锻炼4能量怎样补充
-
-                    ('action', '保护'):20,  # 深蹲怎样保护自己   #20
-                    ('action', '避免'):21,  # 深度怎么避免受伤
-                    ('健身', '保护'):22,  # 健身中怎么保护自己
-                    ('健身', '避免'):23,  # 健身中怎么避免受伤
-
-                    ('增肌', '动作'):24,  # 增肌该做些什么动作  # 24
-                    ('增肌'):25,  # 增肌该怎么做     #25
-                    ('增肌','special'):44,
-                    ('减脂'):26,  # 减脂该怎么做
-                    ('减脂','special'):45,
-                    ('减肥'):27,  # 减肥该怎么做
-                    ('减肥','special'): 46,
-                    ('增重'):28,  # 增重该怎么做
-                    ('减重'):29,  # 减重该怎么做
-
-                    ('健身', '休息'):30,  # 健身后如何合理休息  #30
-                    ('健身', '注意', '饮食'):31,  # 健身期间如何注意饮食搭配
-                    ('健身', '饮食'):32,  # 健身中的饮食搭配 健身后的饮食搭配 健身如何进行饮食搭配
-                    ('规划'):33, # 能给我提点简单的训练时间规划吗（主要是不同训练阶段的频次安排，每周几练，时间间隔等）
-                    ('muscle'):36, #
-                    ('machine','special','muscle'):37 #哑铃练肱二头肌有效果吗
+def get_muscle_of_action(action):
+    # 返回肌肉列表
+    return Action(action).get_muscle()
 
 
-# ('machine', 'action', 'muscle'),  # 哑铃卧推怎样锻炼到胸中束
-# ('machine', 'muscle', 'special'),  # 杠铃怎样练二头有效果
-# ('machine', 'action', 'muscle', 'special'),  # 哑铃卧推对二头效果好吗
-# ('健身','服饰'),  # 去健身房穿什么运动服饰比较好
-# ('健身','礼仪'),  # 健身礼仪是什么
-# ('户外', '健身房', 'special'),  # 户外健身和健身房相比效果好吗
-#  ('action','防具'),# 深蹲防具该准备哪些
-# ('有氧训练'),  # 有氧训练怎样进行
-# ('muscle','热身'),# 背阔肌怎样热身
-# ('练','水'),# 锻炼怎样补充水
-# ('练','能量'),# 锻炼能量怎样补充
-# ('极限','action','保护'),# 极限重量深蹲怎样保护避免受伤
-# ('服饰'),# 去健身房穿什么运动服饰比较好
-# ('machine', 'action', 'special'),  # 哑铃卧推比杠铃卧推效果好吗
-# ('machine', 'action', '重量'),  # 杠铃卧推重量该怎么选择
-# ('machine', 'action', '重量'),  # 杠铃卧推重量该怎么选择
-# ('machine', 'action', 'special'),  # 哑铃卧推比杠铃卧推效果好吗
-}
-
-def pattern_match(pattern, sentence):
-    # print(pattern)
-    # print(sentence)
-    # 1 split sentence
-    # 2 find out focus word  eg muscle/special/action
-    # 3
-    if len(pattern) != len(sentence):
-        return False
-    l = len(sentence)
-    # print(l)
-    for i in range(l):
-        # print(pattern[i])
-        # print(sentence[i])
-        if pattern[i] == 'action':
-            if sentence[i][0] == 'action':
-                continue
-            return False
-        if pattern[i] == 'muscle':
-            if sentence[i][0] == 'muscle':
-                continue
-            return False
-        if pattern[i] == 'special':
-            if sentence[i][0] == 'special':
-                continue
-            return False
-        if pattern[i] == 'negative':
-            if sentence[i][0] == 'negative':
-                continue
-            return False
-        if pattern[i] == 'machine':
-            if sentence[i][0] == 'machine':
-                continue
-            return False
-        if sentence[i][1] == pattern[i]:
-            continue
-        return False
-    return True
+def get_equipment_of_action(action):
+    # 返回器械列表
+    return Action(action).get_equipment()
 
 
-def pattern(sentence):
-    for p in patternList:
-        # print(index)
-        index = patternList[p]
-        if type(p) != tuple:
-            temp = []
-            temp.append(p)
-            p = temp
+def get_level_of_action(action):
+    # 返回动作等级
+    return Action(action).get_level()
 
 
-        if pattern_match(p, sentence):
-            print(sentence)
-            if index == 0 or index == 34 or index == 35:
-                return sentence[0][1] + '锻炼了' + get_muscle_of_action(sentence[0][1])
-            if index == 1:
-                return sentence[0][1] + '还可以锻炼' + get_muscle_of_action(sentence[0][1])
-            if index == 2:
-                return get_describe_of_action(sentence[0][1]) + '\n' + get_details_of_action(sentence[0][1])
-                # return get_describe_of_action(sentence[0][1])
-            if index == 3:
-                list =  get_actionlist_of_muscleGroup(sentence[1][1])
-                count = 0
-                list_str = []
-                for i in list:
-                    if count <=4:
-                        count += 1
-                        list_str.append(i)
-                list_str = str(list_str).replace('[','').replace(']','').replace('\'','')
-                return sentence[1][1] + '可以通过'+ list_str + '锻炼或拉伸'
-            if index == 4 or index == 40:
-                return (sentence[0][1] + "需要" + get_equipment_of_action(sentence[0][1]))
-            if index == 38:
-                return (sentence[0][1] + '锻炼了' + get_actionlist_of_action(sentence[0][1]))
-            if index == 6 or index == 7 or index == 36:
-                list_str,action_list = get_actionlist_of_muscleGroup(sentence[0][1])
-                return (sentence[0][1] + '可以通过' + list_str +'锻炼')
-            if index == 8 or index == 9 or index == 41:
-                return get_details_of_action(sentence[0][1])
-            if index == 10:
-                return get_details_of_action(sentence[0][1])
-            if index == 11 or index == 37:
-                list_str,muscle_list = get_muscle_of_equipments(sentence[0][1])
-                if sentence[2][1] in muscle_list:
-                    return (sentence[0][1] + '可以锻炼' + sentence[2][1])
-                else:
-                    return (sentence[0][1] + '不可以锻炼' + sentence[2][1])
-            if index == 12:
-                list = get_actionlist_of_muscleGroup(sentence[0][1])
-                count = 0
-                list_str = []
-                for i in list:
-                    if count <= 4:
-                        count += 1
-                        list_str.append(i)
-                list_str = str(list_str).replace('[', '').replace(']', '').replace('\'', '')
-                return sentence[0][1] + '可以通过'+ list_str + '锻炼或拉伸'
-            if index == 13:
-                list_str,action_list = get_actionlist_of_euqipments(sentence[0][1])
-                return (sentence[0][1] + '可以做' + list_str)
-            if index == 14:
-                return get_details_of_action(sentence[1][1])
-            if index == 39:
-                return get_actionlist_of_muscle(sentence[1][1])
-            if index == 15:
-                return welcoming()
-            if index == 16:
-                return goodbye()
-            if index == 17 or index == 18:
-                return water_replenishing()
-            if index == 19:
-                return energy_replenishing()
-            if index == 20 or index == 21 or index == 22 or index == 23:
-                return fitness_protection()
-            if index == 24 or index == 25 or index == 44:
-                return musculus_muscle()
-            if index == 26 or index == 27 or index == 29 or index == 45 or index == 46:
-                return lose_weight()
-            if index == 28:
-                return increase_weight()
-            if index == 30:
-                return relax()
-            if index == 31 or index == 32:
-                return energy_replenishing()
-            if index == 33:
-                return fitness_planing()
+def get_details_of_action(action):
+    # 返回动作细节
+    return Action(action).get_details()
 
-    return 'unknown'
+
+def get_type_of_action(action):
+    # 返回动作类别
+    return Action(action).get_type()
+
+
+def get_actionlist_of_muscleGroup(muscleGroup):
+    # 返回肌肉组 涵盖动作
+    return MuscleGroup(muscleGroup).list_muscleGroup_action()
+
+
+def get_describe_of_action(action):
+    # 返回动作描述
+    return Action(action).get_describe()
+
+
+def get_actionlist_of_muscle(muscle):
+    # 返回肌肉相关动作(detial肌肉类型)
+    res = Mongo.action.find()
+    action_list = []
+    str_list = []
+    count = 0
+    for i in res:
+        if i['mainMuscle'] == muscle:
+            if i['name'] not in action_list:
+                if count <= 4:
+                    str_list.append(i['name'])
+                action_list.append(i['name'])
+                count += 1
+    str_list = str(str_list).replace('[', '').replace(']', '').replace('\'', '')
+    return str_list, action_list
+
+
+
+
+def get_equipmentlist_of_muscle(muscle):
+    # 返回肌肉相关器械
+    return (MuscleGroup(muscle).find_related_equipments() + '等器械')
+
+
+def get_actionlist_of_euqipments(equipment):
+    res = Mongo.action.find()
+    action_list = []
+    str_list = []
+    count = 0
+    for i in res:
+        if i['equipment'] == equipment:
+            if i['name'] not in action_list:
+                if count <= 4:
+                    str_list.append(i['name'])
+                action_list.append(i['name'])
+                count += 1
+    str_list = str(str_list).replace('[','').replace(']','').replace('\'','')
+    return str_list,action_list
+
+
+def clothes_advice():
+    return '去健身房穿适合运动的服饰就行，不要太紧，也不要过于肥大。'
+
+
+def get_muscle_of_equipments(equipment):
+    res = Mongo.action.find()
+    muscle_list = []
+    str_list = []
+    count = 0;
+    for i in res:
+        if i['equipment'] == equipment:
+            if i['mainMuscle'] not in muscle_list:
+                if count <= 4:
+                    str_list.append(i['mainMuscle'])
+                muscle_list.append(i['mainMuscle'])
+                count += 1
+    str_list = str(str_list).replace('[','').replace(']','').replace('\'','')
+    return str_list,muscle_list
+
+def get_actionlist_of_action(action):
+    res = Mongo.action.find()
+    action_list = []
+    str_list = []
+    count = 0
+    for i in res:
+        if i['name'] == action:
+            muscle_temp = i['mainMuscle']
+            break
+    for i in res:
+        if i['mainMuscle'] == muscle_temp:
+            if count <= 4:
+                str_list.append(i['name'])
+            if i['name'] not in action_list:
+                action_list.append(i['name'])
+            count += 1
+    str_list = str(str_list).replace('[','').replace(']','').replace('\'','')
+    return str_list,action_list
+
+def welcoming():
+    return('请问您对健身哪方面感兴趣呢，可以直接输入想要了解的动作，肌肉或者器械进行查询。\n')
+
+def goodbye():
+    return('非常感谢您使用THU健身回答任务系统，希望系统对您的健身需求有所帮助！\n')
+
+def water_replenishing():
+    return ('剧烈健身后饮用8-14℃的温水为佳，补水应遵循先少后多的原则，逐步补充水分：可以先用水漱漱口，滋润口腔，喝少量的水，然后在健身后的20-30分钟内，补充150-200mL含糖10%左右的糖盐水最为适宜。\n')
+
+def energy_replenishing():
+    return('选择低淀粉蔬菜作为每餐摄入，每餐吃两个拳头大小的蔬菜量，尽量每天吃到7~10种蔬菜，并且新鲜的调味类蔬菜也是非常好的食物补充。\n蔬菜选择：橄榄、甘蓝、黄瓜、胡萝卜、洋葱、西兰花、芹菜、芦笋、番茄、辣椒、菠菜、葫芦等 \n香料选择：八角、桂皮、葱姜蒜、罗勒、百里香、薄荷、洋葱、胡椒等\n水果的选择：水果的问题在于有些水果果糖很高，如一些浆果类：葡萄等，还有一些瓜类如甜瓜\n有些水果是很好的运动补充，因为富含钾，如香蕉\n有些水果是低卡路里，可以每天吃50~75克，如草莓\n饮料：首选是水，优质的水每天要补充2000毫升以上，水可以帮助加快代谢，更有助身体塑形\n无糖咖啡、茶也是很好的饮料\n也可以选择无糖的运动机能饮料，帮助提升运动效果。\n')
+
+def fitness_protection():
+    return('1.每次锻炼前要做好充分的准备活动，使肌肉发热有弹性，做好高度紧张的准备。\n2.完成每个动作都要高度集中注意力。\n3.认真学习正确的锻炼动作，逐渐提高负荷量。\n4.学会正确的呼吸方法，避免过分憋气。\n5.初学者宜慎重加量，以便使身体各部位适应不断改变的负荷。尤其要加强对抗肌，小肌群的补偿锻炼。\n6.当肌肉出现疼痛，变硬时，应注意调整负荷。\n7.注意个人卫生。\n8.锻炼后要采用各种各样快速恢复的重建措施。')
+
+def lose_weight():
+    return(' 1.保证营养的摄入，应广泛摄取各种食物，但不吃高热量食物。\n2.严禁零食：应主要减量的食品的糖类。\n 3.不可快食：快食的人，食物在嘴里得不到充分的嚼碎就被送进胃里，致使饭量增加，所以吃饭时注意不可快食，吃饭时一定要细嚼慢咽，使食物与唾液充分混合，\n4.要注意将每日的饮食分为有规律的三餐，同时要注意每餐不要吃得过饱，以吃八分饱为好。\n5.停止夜食：摄取食物要消耗一定能量，在食用一种食物的情况下，安静时食 用，要比活动中食用，热能的消耗要少得多。如睡前饮食，易使大量的热量被积蓄而转化为脂肪.\n6.要达到好的减肥效果那么在进行饮食控制的同时，还需配合运动治疗以增加能量消耗，双管齐下才是最佳效果。\n')
+def lose_weight_action():
+    return('腹部：西西里卷腹、仰卧抬腿、卷腹、反向卷腹、仰卧风车。（进阶加哑铃）\n腿部：深蹲、单腿硬拉、保加利亚式深蹲。（进阶加哑铃）\n臀部：跪姿后踢腿、俯卧后踢腿、保加利亚式深蹲、各种臀桥。\n背部：俯卧Y字伸展、俯卧TW伸展、俯卧挺身转体。（进阶加哑铃）\n手臂：哑铃俯身臂屈伸、天鹅臂肩膀：哑铃侧平举、天鹅臂。\n胸部：各种俯卧撑、哑铃臀桥飞鸟。')
+
+def musculus_muscle():
+    return('增肌需要注意的三个事项：\n1.制定训练计划，一周五天最为适宜，可以保持肌肉的强度(周一:胸部,周二:背部,周三:腿部,周四:肩部,周五:手臂)\n2.注意饮食，补充足够能量.\n3.增肌期不做有氧训练，阻碍肌肉增长')
+
+def increase_weight():
+    return('1. 多做身体各部位肌肉训练，强化肌肉纤维。\n2. 摄入大量蛋白与碳水化合物，保证肌肉的修复和生长，保证摄入能量大于你消耗的能量\n')
+
+def relax():
+    return('初级训练者:练一天休息一天：肌肉需要更多休息来慢慢适应训练强度，获得更好增长。\n中级训练者:练2天休息1天：在适应了训练节奏和强度后，肌肉恢复能力有所增强，增加训练天数，促进肌肉生长。\n高级训练者:练3天休息1天：如果为了比赛准备可采取此种方式，每天上下午练，上午小肌肉群，下午大肌肉群，三天正好走完一个循环第四天休息。\n')
+
+def fitness_planing():
+    return ('起步期: 1-4周，主要以激活肌肉为目的进行训练，主要多做一下初级的健身动作。\n上升期: 5-8周，动作模式建立后，通过四周的时间提升训练强度，需要有组数的，有计划的进行动作组合，动作可参考初级与中级的健身动作。\n冲刺期: 9-12周，在计划中加入高级健身动作进行健身计划的规划，增加爆发力的训练，提升肌肉的控制力。\n')
 
 
 if __name__ == '__main__':
-    # print(pattern([('action', '平板支撑'), ('special', '肌肉')]))
-    # print(pattern([('action', '平板支撑'), ('muscle', '腹肌')]))
-    # print(pattern([('action', '平板支撑')]))
-    print(pattern([('action', '平板支撑'), ('negative', '除'), ('muscle', '腹肌')]))
-    # print(pattern([('action', '平板支撑'), ('special','有效')]))
-    # print(pattern([('special', '可以'), ('muscle', '腹肌')]))
-    # print(pattern([('action', '平板支撑'), ('special', '器材')]))
-    # print(pattern([('action', '平板支撑'), ('special', '动作')]))#unsovle
-    pass
+    # print(get_muscle_of_action('平板支撑'))
+    # print(get_muscleGroup_action('肱二头肌'))
+    print(fitness_planing())
+    # print(get_actionlist_of_muscle('腹直肌'))
+    # print(find_action_of_euqipments('弹力带'))
