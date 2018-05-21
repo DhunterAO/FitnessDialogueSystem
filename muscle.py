@@ -30,28 +30,29 @@ class MuscleGroup:
     def find_related_action(self):
         res = Mongo.action.find()
         action_list = []
+        str_list = []
         count = 0
         for i in res:
             if i['mainMuscle'] == self.name:
-                if count == 4:
-                    break
+                if count <= 4:
+                    str_list.append(i['name'])
                 if i['mainMuscle'] not in action_list:
                     action_list.append(i['name'])
                 count += 1
-        str_list =str(action_list).replace('[','').replace(']','').replace('\'','')
-        return (self.name + '有' +str_list + '等动作')
+        str_list =str(str_list).replace('[','').replace(']','').replace('\'','')
+        return str_list,action_list
 
     def find_related_equipments(self):
         res = Mongo.action.find()
-        action_list = []
+        str_list = []
         equipment_list = []
         count = 0
         for i in res:
             if i['mainMuscle'] == self.name:
-                if count == 4:
-                    break
+                if count <= 4:
+                    str_list.append(i['equipment'])
                 if i['equipment'] not in equipment_list:
                     equipment_list.append(i['equipment'])
-        str_list = str(equipment_list).replace('[','').replace(']','').replace('\'','')
-        return (self.name + '有' + str_list + '等相关器械')
+        str_list = str(str_list).replace('[','').replace(']','').replace('\'','')
+        return str_list,equipment_list
 
