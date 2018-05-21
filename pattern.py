@@ -9,17 +9,19 @@ patternList = {
                   ('action'): 2,  # Q1怎样做俯卧撑 Q2俯卧撑     #########
                   ('练', 'muscle'): 3,  # 怎么样可以锻炼腹肌
                   ('action', '要', 'machin'): 4,  # 平板支撑需要什么器械/道具/设备/条件 #4
-
                   ('action', '动作'): 5,  # 跟仰卧起坐差不多的动作有什么
                   ('action', 'special', 'special'):38,  #卧推锻炼哪些肌肉
-                  ('action', 'special', 'muscle'):42, #unset
                   ('muscle', '练'): 6,  # 腹肌怎么练
                   ('muscle', '炼'): 7,  # 腹肌怎么锻炼
-                  ('action', '炼'): 8,  # 卧推怎么锻炼 # ok
-                  ('action', '练'): 9,  # 卧推怎么练 #9 # ok
+                  ('action', '炼'): 8,  # 卧推怎么锻炼
+                  ('action', '练'): 9,  # 卧推怎么练 #9
+                    ('special', 'muscle'):39,
+                    ('action', '注意'): 10,  # 卧推要有什么特别注意事项
+                  ('action', 'special', 'muscle'):42, #unset
                     ('action','锻炼'): 41, # ok
                     ('special', 'muscle'):39,
                     ('action', '注意'): 10,  # 卧推要有什么特别注意事项 # ok
+
                     ('machine', 'special', 'muscle'): 11,  # 哑铃练肱二头肌有效果吗  ####
                     ('muscle', '拉伸'):12,  # 背阔肌怎样拉伸
                     ('machine', '动作'):13,  # 哑铃主要可以做哪些动作
@@ -127,35 +129,43 @@ def pattern(sentence):
         if pattern_match(p, sentence):
             print(sentence)
             if index == 0 or index == 34 or index == 35:
-                return get_muscle_of_action(sentence[0][1])
+                return (sentence[0][1] + '锻炼了' + get_muscle_of_action(sentence[0][1]))
             if index == 1:
-                return get_muscle_of_action(sentence[0][1])
+                return (sentence[0][1] + '还可以锻炼' + get_muscle_of_action(sentence[0][1]))
             if index == 2:
-                return get_describe_of_action(sentence[0][1])
+                return (get_describe_of_action(sentence[0][1]) + '\n' + get_details_of_action())
                 # return get_describe_of_action(sentence[0][1])
             if index == 3:
-                return  get_actionlist_of_muscleGroup(sentence[1][1])
+                list_str,action_list = get_actionlist_of_muscleGroup(sentence[1][1])
+                return (sentence[1][1]+ '可以通过' + list_str + '锻炼')
             if index == 4 or index == 40:
-                return sentence[0][1] + "需要" + get_equipment_of_action(sentence[0][1])
-            if index == 5 or index == 38:
-                return get_actionlist_of_action(sentence[0][1])
+                return (sentence[0][1] + "需要" + get_equipment_of_action(sentence[0][1]))
+            if index == 38:
+                return (sentence[0][1] + '锻炼了' + get_actionlist_of_action(sentence[0][1]))
             if index == 6 or index == 7 or index == 36:
-                return get_actionlist_of_muscleGroup(sentence[0][1])
+                list_str,action_list = get_actionlist_of_muscleGroup(sentence[0][1])
+                return (sentence[0][1] + '可以通过' + list_str +'锻炼')
             if index == 8 or index == 9 or index == 41:
                 return get_details_of_action(sentence[0][1])
             if index == 10:
                 return get_details_of_action(sentence[0][1])
             if index == 11 or index == 37:
-                return get_muscle_of_equipments(sentence[0][1])
+                list_str,muscle_list = get_muscle_of_equipments(sentence[0][1])
+                if sentence[2][1] in muscle_list:
+                    return (sentence[0][1] + '可以锻炼' + sentence[2][1])
+                else:
+                    return (sentence[0][1] + '不可以锻炼' + sentence[2][1])
             if index == 12:
-                return get_actionlist_of_muscleGroup(sentence[0][1])
+                list_str,actoin_list = get_actionlist_of_muscleGroup(sentence[0][1])
+                return (list_str)
             if index == 13:
-                return get_actionlist_of_euqipments(sentence[0][1])
+                list_str,action_list = get_actionlist_of_euqipments(sentence[0][1])
+                return (sentence[0][1] + '可以做' + list_str)
             if index == 14:
                 return get_details_of_action(sentence[1][1])
             if index == 39:
                 return get_actionlist_of_muscle(sentence[1][1])
-            if index == 15 or index == 43:
+            if index == 15:
                 return welcoming()
             if index == 16:
                 return goodbye()
