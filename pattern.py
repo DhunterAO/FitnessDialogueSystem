@@ -27,6 +27,7 @@ patternList = {
                     ('action', 'machine'):40, #平板支撑需要什么器械
                     # （因为这些关键词只要有一个较为完整的回答基本就够了，问的比较频繁）##更新于5.18
                     ('你好','了解'):15,  # 你好，我想了解一些健身健身方面的知识（返回问候语和一些鼓励的话）#15
+                    ('健身'):43,
                     ('谢谢'):16,  # 对我很有帮助，谢谢啦（返回励志的话）
                     ('special', '补充水'):17,  # 锻炼怎样补充水
                     ('special', '补水'):18,  # 锻炼怎样补充水
@@ -39,8 +40,11 @@ patternList = {
 
                     ('增肌', '动作'):24,  # 增肌该做些什么动作  # 24
                     ('增肌'):25,  # 增肌该怎么做     #25
+                    ('增肌','special'):44,
                     ('减脂'):26,  # 减脂该怎么做
+                    ('减脂','special'):45,
                     ('减肥'):27,  # 减肥该怎么做
+                    ('减肥','special'): 46,
                     ('增重'):28,  # 增重该怎么做
                     ('减重'):29,  # 减重该怎么做
 
@@ -151,7 +155,7 @@ def pattern(sentence):
                 return get_details_of_action(sentence[1][1])
             if index == 39:
                 return get_actionlist_of_muscle(sentence[1][1])
-            if index == 15:
+            if index == 15 or index == 43:
                 return welcoming()
             if index == 16:
                 return goodbye()
@@ -161,9 +165,9 @@ def pattern(sentence):
                 return energy_replenishing()
             if index == 20 or index == 21 or index == 22 or index == 23:
                 return fitness_protection()
-            if index == 24 or index == 25:
+            if index == 24 or index == 25 or index == 44:
                 return musculus_muscle()
-            if index == 26 or index == 27 or index == 29:
+            if index == 26 or index == 27 or index == 29 or index == 45 or index == 46:
                 return lose_weight()
             if index == 28:
                 return increase_weight()
