@@ -8,27 +8,29 @@ patternList = {
                   ('action', 'negative', 'muscle'): 1,  # 俯卧撑除了练腹肌
                   ('action'): 2,  # Q1怎样做俯卧撑 Q2俯卧撑     #########
                   ('练', 'muscle'): 3,  # 怎么样可以锻炼腹肌
-                  ('action', '要', '器'): 4,  # 平板支撑需要什么器械/道具/设备/条件 #4
+                  ('action', '要', 'machin'): 4,  # 平板支撑需要什么器械/道具/设备/条件 #4
 
                   ('action', '动作'): 5,  # 跟仰卧起坐差不多的动作有什么
-                  ('action', 'special', 'special'):38,
+                  ('action', 'special', 'special'):38,  #卧推锻炼哪些肌肉
+                  ('action', 'special', 'muscle'):42, #unset
                   ('muscle', '练'): 6,  # 腹肌怎么练
                   ('muscle', '炼'): 7,  # 腹肌怎么锻炼
                   ('action', '炼'): 8,  # 卧推怎么锻炼
                   ('action', '练'): 9,  # 卧推怎么练 #9
-
+                    ('action','锻炼'): 41,
+                    ('special', 'muscle'):39,
                     ('action', '注意'): 10,  # 卧推要有什么特别注意事项
                     ('machine', 'special', 'muscle'): 11,  # 哑铃练肱二头肌有效果吗  ####
                     ('muscle', '拉伸'):12,  # 背阔肌怎样拉伸
                     ('machine', '动作'):13,  # 哑铃主要可以做哪些动作
                     ('machine', 'action', 'muscle'):14,  # 哑铃卧推怎样锻炼到胸中束  #14 5.17号解决以上pattern
-
+                    ('action', 'machine'):40, #平板支撑需要什么器械
                     # （因为这些关键词只要有一个较为完整的回答基本就够了，问的比较频繁）##更新于5.18
-                    ('了解', '健身'):15,  # 你好，我想了解一些健身健身方面的知识（返回问候语和一些鼓励的话）#15
+                    ('你好','了解'):15,  # 你好，我想了解一些健身健身方面的知识（返回问候语和一些鼓励的话）#15
                     ('谢谢'):16,  # 对我很有帮助，谢谢啦（返回励志的话）
-                    ('炼', '补充水'):17,  # 锻炼怎样补充水
-                    ('炼', '补水'):18,  # 锻炼怎样补充水
-                    ('炼', '补充能量'):19,  # 锻炼能量怎样补充
+                    ('special', '补充水'):17,  # 锻炼怎样补充水
+                    ('special', '补水'):18,  # 锻炼怎样补充水
+                    ('special', '补充能量'):19,  # 锻炼4能量怎样补充
 
                     ('action', '保护'):20,  # 深蹲怎样保护自己   #20
                     ('action', '避免'):21,  # 深度怎么避免受伤
@@ -125,17 +127,17 @@ def pattern(sentence):
             if index == 1:
                 return get_muscle_of_action(sentence[0][1])
             if index == 2:
-                return get_details_of_action(sentence[0][1])
+                return get_describe_of_action(sentence[0][1])
                 # return get_describe_of_action(sentence[0][1])
             if index == 3:
                 return  get_actionlist_of_muscleGroup(sentence[1][1])
-            if index == 4:
+            if index == 4 or index == 40:
                 return get_equipment_of_action(sentence[0][1])
             if index == 5 or index == 38:
                 return get_actionlist_of_action(sentence[0][1])
             if index == 6 or index == 7 or index == 36:
                 return get_actionlist_of_muscleGroup(sentence[0][1])
-            if index == 8 or index == 9:
+            if index == 8 or index == 9 or index == 41:
                 return get_details_of_action(sentence[0][1])
             if index == 10:
                 return get_details_of_action(sentence[0][1])
@@ -147,6 +149,8 @@ def pattern(sentence):
                 return get_actionlist_of_euqipments(sentence[0][1])
             if index == 14:
                 return get_details_of_action(sentence[1][1])
+            if index == 39:
+                return get_actionlist_of_muscle(sentence[1][1])
             if index == 15:
                 return welcoming()
             if index == 16:
