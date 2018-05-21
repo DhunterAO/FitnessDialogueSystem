@@ -129,15 +129,22 @@ def pattern(sentence):
         if pattern_match(p, sentence):
             print(sentence)
             if index == 0 or index == 34 or index == 35:
-                return (sentence[0][1] + '锻炼了' + get_muscle_of_action(sentence[0][1]))
+                return sentence[0][1] + '锻炼了' + get_muscle_of_action(sentence[0][1])
             if index == 1:
-                return (sentence[0][1] + '还可以锻炼' + get_muscle_of_action(sentence[0][1]))
+                return sentence[0][1] + '还可以锻炼' + get_muscle_of_action(sentence[0][1])
             if index == 2:
-                return (get_describe_of_action(sentence[0][1]) + '\n' + get_details_of_action())
+                return get_describe_of_action(sentence[0][1]) + '\n' + get_details_of_action(sentence[0][1])
                 # return get_describe_of_action(sentence[0][1])
             if index == 3:
-                list_str,action_list = get_actionlist_of_muscleGroup(sentence[1][1])
-                return (sentence[1][1]+ '可以通过' + list_str + '锻炼')
+                list =  get_actionlist_of_muscleGroup(sentence[1][1])
+                count = 0
+                list_str = []
+                for i in list:
+                    if count <=4:
+                        count += 1
+                        list_str.append(i)
+                list_str = str(list_str).replace('[','').replace(']','').replace('\'','')
+                return sentence[1][1] + '可以通过'+ list_str + '锻炼或拉伸'
             if index == 4 or index == 40:
                 return (sentence[0][1] + "需要" + get_equipment_of_action(sentence[0][1]))
             if index == 38:
@@ -156,8 +163,15 @@ def pattern(sentence):
                 else:
                     return (sentence[0][1] + '不可以锻炼' + sentence[2][1])
             if index == 12:
-                list_str,actoin_list = get_actionlist_of_muscleGroup(sentence[0][1])
-                return (list_str)
+                list = get_actionlist_of_muscleGroup(sentence[0][1])
+                count = 0
+                list_str = []
+                for i in list:
+                    if count <= 4:
+                        count += 1
+                        list_str.append(i)
+                list_str = str(list_str).replace('[', '').replace(']', '').replace('\'', '')
+                return sentence[0][1] + '可以通过'+ list_str + '锻炼或拉伸'
             if index == 13:
                 list_str,action_list = get_actionlist_of_euqipments(sentence[0][1])
                 return (sentence[0][1] + '可以做' + list_str)
