@@ -50,11 +50,16 @@ def get_equipmentlist_of_muscle(muscle):
 def get_actionlist_of_euqipments(equipment):
     res = Mongo.action.find()
     action_list = []
+    count = 0
     for i in res:
         if i['equipment'] == equipment:
             if i['name'] not in action_list:
+                if count == 4:
+                    break
                 action_list.append(i['name'])
-    return action_list
+                count += 1
+    str_list = str(action_list).replace('[','').replace(']','').replace('\'','')
+    return str_list
 
 
 def clothes_advice():
@@ -64,24 +69,34 @@ def clothes_advice():
 def get_muscle_of_equipments(equipment):
     res = Mongo.action.find()
     muscle_list = []
+    count = 0;
     for i in res:
         if i['equipment'] == equipment:
             if i['mainMuscle'] not in muscle_list:
+                if count == 4:
+                    break
                 muscle_list.append(i['mainMuscle'])
-    return muscle_list
+                count += 1
+    str_list = str(muscle_list).replace('[','').replace(']','').replace('\'','')
+    return str_list
 
 def get_actionlist_of_action(action):
     res = Mongo.action.find()
     action_list = []
+    count = 0
     for i in res:
         if i['name'] == action:
             muscle_temp = i['mainMuscle']
             break
     for i in res:
-        if['mainMuscle'] == muscle_temp:
+        if i['mainMuscle'] == muscle_temp:
+            if count == 4:
+                break
             if i['name'] not in action_list:
                 action_list.append(i['name'])
-    return action_list
+            count += 1
+    str_list = str(action_list).replace('[','').replace(']','').replace('\'','')
+    return str_list
 
 def welcoming():
     return('请问您对健身哪方面感兴趣呢，可以直接输入想要了解的动作，肌肉或者器械进行查询。\n')
