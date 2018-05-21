@@ -55,7 +55,19 @@
       .list .name[_v-7e2238dc]{display:inline-block;margin:0 0 0 15px}
     </style>
     <style type="text/css">
-      .btn[_v-34e798a2]{height: 50px;width: 100px;color: #FFF;background: #3dbb2b; margin-left: 10px; margin-bottom: 20px;}
+      .btn[_v-34e798a2]{
+          position: absolute;
+          height: 50px;
+          width: 100px;
+          color: #FFF;
+          background: #3dbb2b;
+          margin-top: 90px;
+          margin-bottom: 20px;
+          text-align: center;
+          padding-top: 1px;
+          font-size: 25px;
+          margin-left: 20px;
+      }
       .text[_v-34e798a2]{height:160px;border-top:1px solid #ddd}
       .context[_v-34e798a2]{height:160px;width:460px;}
     </style>
@@ -123,7 +135,7 @@
 
         <div class="text" _v-34e798a1="" _v-eda17dc8="">
           <textarea id="textBox" class="context" _v-34e798a2=""></textarea>
-          <button _v-34e798a2="" class="btn" onclick="sendTextMessage()">Send</button>
+          <button id="btn" class="btn" _v-34e798a2="" onclick="sendTextMessage()">发送</button>
         </div>
       </div>
     </div>
