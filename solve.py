@@ -39,12 +39,12 @@ def get_describe_of_action(action):
 
 def get_actionlist_of_muscle(muscle):
     # 返回肌肉相关动作(detial肌肉类型)
-    return  MuscleGroup(muscle).find_related_action()
+    return  (MuscleGroup(muscle).find_related_action() + ' 等动作')
 
 
 def get_equipmentlist_of_muscle(muscle):
     # 返回肌肉相关器械
-    return MuscleGroup(muscle).find_related_equipments()
+    return (MuscleGroup(muscle).find_related_equipments() + '等器械')
 
 
 def get_actionlist_of_euqipments(equipment):
@@ -59,7 +59,7 @@ def get_actionlist_of_euqipments(equipment):
                 action_list.append(i['name'])
                 count += 1
     str_list = str(action_list).replace('[','').replace(']','').replace('\'','')
-    return str_list
+    return (equipment + '有' + str_list + '等相关动作')
 
 
 def clothes_advice():
@@ -78,7 +78,7 @@ def get_muscle_of_equipments(equipment):
                 muscle_list.append(i['mainMuscle'])
                 count += 1
     str_list = str(muscle_list).replace('[','').replace(']','').replace('\'','')
-    return str_list
+    return (equipment + '有' + str_list + '等相关肌肉')
 
 def get_actionlist_of_action(action):
     res = Mongo.action.find()
@@ -96,7 +96,7 @@ def get_actionlist_of_action(action):
                 action_list.append(i['name'])
             count += 1
     str_list = str(action_list).replace('[','').replace(']','').replace('\'','')
-    return str_list
+    return (action + '有'+ str_list + '等相关动作')
 
 def welcoming():
     return('请问您对健身哪方面感兴趣呢，可以直接输入想要了解的动作，肌肉或者器械进行查询。\n')
