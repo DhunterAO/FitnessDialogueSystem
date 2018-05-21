@@ -15,16 +15,16 @@ patternList = {
                   ('action', 'special', 'muscle'):42, #unset
                   ('muscle', '练'): 6,  # 腹肌怎么练
                   ('muscle', '炼'): 7,  # 腹肌怎么锻炼
-                  ('action', '炼'): 8,  # 卧推怎么锻炼
-                  ('action', '练'): 9,  # 卧推怎么练 #9
-                    ('action','锻炼'): 41,
+                  ('action', '炼'): 8,  # 卧推怎么锻炼 # ok
+                  ('action', '练'): 9,  # 卧推怎么练 #9 # ok
+                    ('action','锻炼'): 41, # ok
                     ('special', 'muscle'):39,
-                    ('action', '注意'): 10,  # 卧推要有什么特别注意事项
+                    ('action', '注意'): 10,  # 卧推要有什么特别注意事项 # ok
                     ('machine', 'special', 'muscle'): 11,  # 哑铃练肱二头肌有效果吗  ####
                     ('muscle', '拉伸'):12,  # 背阔肌怎样拉伸
                     ('machine', '动作'):13,  # 哑铃主要可以做哪些动作
-                    ('machine', 'action', 'muscle'):14,  # 哑铃卧推怎样锻炼到胸中束  #14 5.17号解决以上pattern
-                    ('action', 'machine'):40, #平板支撑需要什么器械
+                    ('machine', 'action', 'muscle'):14,  # 哑铃卧推怎样锻炼到胸中束  #14 5.17号解决以上pattern # ok
+                    ('action', 'machine'):40, #平板支撑需要什么器械 # ok
                     # （因为这些关键词只要有一个较为完整的回答基本就够了，问的比较频繁）##更新于5.18
                     ('你好','了解'):15,  # 你好，我想了解一些健身健身方面的知识（返回问候语和一些鼓励的话）#15
                     ('健身'):43,
@@ -136,7 +136,7 @@ def pattern(sentence):
             if index == 3:
                 return  get_actionlist_of_muscleGroup(sentence[1][1])
             if index == 4 or index == 40:
-                return get_equipment_of_action(sentence[0][1])
+                return sentence[0][1] + "需要" + get_equipment_of_action(sentence[0][1])
             if index == 5 or index == 38:
                 return get_actionlist_of_action(sentence[0][1])
             if index == 6 or index == 7 or index == 36:
