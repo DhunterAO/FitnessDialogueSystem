@@ -1,6 +1,6 @@
 from action import *
 from muscle import *
-
+import re
 
 def get_muscle_of_action(action):
     # 返回肌肉列表
@@ -39,7 +39,7 @@ def get_describe_of_action(action):
 
 def get_actionlist_of_muscle(muscle):
     # 返回肌肉相关动作(detial肌肉类型)
-    return MuscleGroup(muscle).find_related_action()
+    return  MuscleGroup(muscle).find_related_action()
 
 
 def get_equipmentlist_of_muscle(muscle):
@@ -84,7 +84,7 @@ def get_actionlist_of_action(action):
     return action_list
 
 def welcoming():
-    return('您好，欢迎使用THU健身问答任务系统！\n这里有人体肌肉示意图供您参考，请问您对健身哪方面感兴趣呢。\n')
+    return('请问您对健身哪方面感兴趣呢，可以直接输入想要了解的动作，肌肉或者器械进行查询。\n')
 
 def goodbye():
     return('非常感谢您使用THU健身回答任务系统，希望系统对您的健身需求有所帮助！\n')
